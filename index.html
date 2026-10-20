@@ -1,21 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>✨ Pulse · Social Network + Patreon+</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js">
-    </script>
-    <script src="https://www.paypal.com/sdk/js?client-id=AZ9PGqfwfBFyHG_XK-wBvAfw2r-m6CkFWjQaEkI_NRDN76vf4g6EbfkM1rWXpyYnZGUej1KNKGxjWT3G&currency=USD&intent=capture">
-    </script>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pulse — Community in Motion</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2717%27%20fill%3D%27%234de1d2%27%2F%3E%3Ctext%20x%3D%2732%27%20y%3D%2747%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2Csans-serif%27%20font-size%3D%2745%27%20font-weight%3D%27800%27%20fill%3D%27%230b1119%27%3EP%3C%2Ftext%3E%3C%2Fsvg%3E"/>
+<meta name="theme-color" content="#0b1119"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;family=Quicksand:wght@300;400;600;700&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;family=Quicksand:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" rel="stylesheet"/><noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/></noscript>
+<script defer="" src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js">
+</script>
+<style>
         /* ================================================================
            PULSE BASE STYLES (primary)
            ================================================================ */
@@ -2463,600 +2463,751 @@
                 max-width: 100%;
             }
         }
-    </style>
+    
+
+/* Pulse: original midnight palette, new editorial workspace. */
+:root{color-scheme:dark;--pulse-night:#0e0e1a;--pulse-panel:#161625;--pulse-panel-strong:#1a1a2e;--pulse-paper:#f0f4ff;--pulse-muted:#94a3b8;--pulse-coral:#a78bfa;--pulse-pink:#f472b6;--pulse-orange:#c4b5fd;--pulse-lime:#a78bfa;--pulse-line:rgba(167,139,250,.16)}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{display:block;padding:0;background:#0e0e1a;color:#f0f4ff;background-image:radial-gradient(ellipse at 70% 0,rgba(120,119,198,.08),transparent 50%);background-attachment:scroll;font-family:Inter,system-ui,sans-serif}
+body::before,body::after{display:none}.app-container{width:100%;max-width:1520px;margin:auto;padding:0 30px}
+#intro-overlay{display:none!important}
+.header{min-height:88px;display:flex;gap:24px;align-items:center;padding:18px 0;margin:0;border-bottom:1px solid var(--pulse-line);background:#0e0e1a;position:relative;z-index:10}
+.header .brand{min-width:208px;gap:10px}.brand-mark{width:36px;height:36px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#a78bfa,#f472b6);color:#151322;font-size:24px;font-weight:900}
+.header h1{font-size:27px;letter-spacing:-1.5px;background:linear-gradient(135deg,#a78bfa,#f472b6);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}.header h1 i{display:none}
+.header-edition{font-size:10px;letter-spacing:2px;color:#94a3b8;border-left:1px solid var(--pulse-line);padding-left:24px;line-height:1.7}.header-controls{flex:1;justify-content:flex-end;gap:10px}
+.header-controls input[type=search]{width:min(300px,30vw);border-radius:9px;background-color:#161625}.header-controls input[type=search]:focus{width:min(300px,30vw)}.header-controls select,.auth-btn{border-radius:9px;background-color:#161625}.auth-btn{min-height:36px}.auth-btn .display-name{color:#e2e8f0}
+.pulse-workspace{display:grid;grid-template-columns:208px minmax(0,1fr) 264px;gap:28px;padding-top:28px;align-items:start}
+.pulse-sidebar{position:sticky;top:24px;min-width:0;display:flex;flex-direction:column;gap:24px}.rail-label{font-size:10px;letter-spacing:2px;color:#8e8ca7;font-weight:700;margin-bottom:13px}.sidebar-intro{font-size:12px;color:#94a3b8;line-height:1.8;padding-top:20px;border-top:1px solid var(--pulse-line)}.sidebar-intro strong{display:block;color:#e2dafa;margin-bottom:6px;font-size:13px}
+.tabs-container{display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:0;margin:0;border:0;border-radius:0;background:none;overflow:visible;box-shadow:none}
+.tabs-container .tab-btn{width:100%;text-align:left;justify-content:flex-start;padding:13px 14px;border-radius:10px;background:transparent;color:#a5a5bd;min-height:44px;font-size:13px;border:1px solid transparent;white-space:nowrap}
+.tabs-container .tab-btn:hover{background:#191827;color:#f0f4ff}.tabs-container .tab-btn.active{background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.22);color:#c4b5fd;box-shadow:none}.tabs-container .tab-btn.active::after{content:'↗';margin-left:auto;float:right}.tabs-container .patreon-tab{color:#f472b6}.tabs-container .admin-tab{color:#fbbf24}
+.pulse-main{min-width:0}.pulse-community{min-width:0;display:flex;flex-direction:column;gap:24px;position:sticky;top:24px}
+.pulse-hero{position:relative;padding:7px 0 26px;margin-bottom:0;display:block;min-height:0;border:0;border-radius:0;background:none;box-shadow:none;overflow:hidden}.pulse-hero::after{content:'THE COMMUNITY EDIT';font-size:9px;letter-spacing:2px;color:#78758f;display:block;padding-top:20px}.hero-kicker{font-size:10px;letter-spacing:2.5px;font-weight:700;color:#b5a1e6;display:flex;align-items:center;gap:8px;margin-bottom:14px}.hero-live-dot{width:6px;height:6px;border-radius:50%;background:#f472b6}.hero-copy h2{font-size:clamp(32px,3.5vw,52px);line-height:1.08;letter-spacing:-2px;font-weight:750;margin:0 0 15px;color:#f0f4ff}.hero-copy h2 span{color:#c4b5fd}.hero-copy p{font-size:12px;line-height:1.8;color:#94a3b8;max-width:470px;margin:0}.hero-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}.hero-button{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:8px;font-size:11px;font-weight:650;text-decoration:none}.hero-button-primary{background:#a78bfa;color:#151322}.hero-button-secondary{color:#c4b5fd;border:1px solid #38314c}.hero-footnote,.hero-art{display:none}
+.ticker-wrapper{margin:0 0 24px;border-radius:0;border:0;border-top:1px solid var(--pulse-line);border-bottom:1px solid var(--pulse-line);background:#12121f;box-shadow:none;backdrop-filter:none;height:36px}.ticker-icon{border:0!important;background:#191625!important;font-size:14px;color:#a78bfa}.ticker-item{font-size:10px;color:#a5a5bd}.ticker-item .highlight{color:#c4b5fd}.ticker-content{animation-duration:70s}
+.feed-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--pulse-line)}.feed-heading h2{font-size:17px;letter-spacing:-.4px}.feed-heading span{font-size:9px;letter-spacing:1.8px;color:#8e8ca7}
+.create-post{padding:18px;border-radius:12px;background:#161625;border:1px solid var(--pulse-line);box-shadow:none;margin-bottom:24px}.create-post .form-row{gap:8px}.create-post input[type=text],.create-post textarea{border-radius:8px;background:#10101d;color:#f0f4ff;border-color:#2d2b40;font-family:inherit}.create-post textarea{min-height:76px}.create-post .form-actions button,#publishBtn,.load-more-btn{border-radius:8px;background:#a78bfa;color:#151322;border:0;box-shadow:none;font-weight:700}.upload-row .file-upload .file-label{border-radius:7px}.create-post .form-actions .left span{color:#94a3b8!important}
+.post-card{padding:22px;border-radius:12px;background:#161625;border:1px solid var(--pulse-line);box-shadow:none;margin-bottom:18px;transition:border-color .18s}.post-card:hover{transform:none;background:#181827;border-color:#4b3c69;box-shadow:none}.post-card::before{display:none}.issue-masthead{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid #30283f;padding-bottom:12px;margin-bottom:17px}.issue-series{font-size:8px;letter-spacing:1.8px;text-transform:uppercase;color:#9b8cb8}.issue-number{display:inline-flex;gap:7px;align-items:baseline;color:#c4b5fd}.issue-number span{font-size:8px;letter-spacing:1.5px}.issue-number strong{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums}.post-card .post-title{font-size:22px;line-height:1.3;letter-spacing:-.6px;color:#f0f4ff}.post-card .post-text,.post-card .post-content{color:#b9bfd0;line-height:1.8}.post-card .post-user{color:#e2e8f0}.post-media img{border-radius:8px}.post-time{font-size:10px}.post-footer{border-top-color:#2a273a}.post-footer button{border-radius:7px}.post-card .avatar{width:34px;height:34px}
+.community-card{background:#141421;border:1px solid var(--pulse-line);border-radius:12px;padding:19px}.community-card h2{font-size:14px;letter-spacing:-.3px;margin-bottom:6px}.community-card>p{font-size:11px;line-height:1.7;color:#94a3b8;margin-bottom:20px}.stats-dashboard{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;padding:0;margin:0;background:none;border:0;box-shadow:none;border-radius:0}.stat-item{padding:15px 0;text-align:left;border-top:1px solid #292638;min-width:0}.stat-icon{display:none}.stat-value{font-size:22px;color:#e2dafa;font-weight:650}.stat-label{font-size:9px;color:#8e8ca7;text-transform:uppercase;letter-spacing:1px;margin-top:4px}.stat-online .stat-value{color:#34d399}.roles-legend{display:flex;flex-wrap:wrap;gap:9px 12px;background:none;border:0;border-top:1px solid #292638;padding:16px 0 0;margin:8px 0 0;justify-content:flex-start}.roles-legend .role{font-size:9px;color:#94a3b8}.roles-legend .color-dot{width:5px;height:5px}
+.community-guide{margin:0}.guide-heading>span{font-size:9px;color:#a78bfa;letter-spacing:2px}.guide-heading h2{font-size:14px;color:#e2dafa;margin:8px 0 17px}.guide-grid{display:flex;flex-direction:column;gap:0}.guide-card{font-family:inherit;display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;color:#f0f4ff;padding:15px 0;border:0;border-top:1px solid #292638;cursor:pointer}.guide-icon{color:#a78bfa;font-size:13px}.guide-card-copy{display:grid;gap:5px}.guide-card-copy strong{font-size:11px}.guide-card-copy small{font-size:10px;color:#94a3b8;line-height:1.6}.guide-arrow{font-size:9px;color:#8e8ca7;margin-left:auto}
+#tipButtonContainer{position:static;margin:0;width:100%}#showWidgetBtn{width:100%;border-radius:9px;background:linear-gradient(135deg,rgba(167,139,250,.14),rgba(244,114,182,.08));border:1px solid #443357;color:#e2dafa;font-family:inherit;font-size:12px;padding:13px 10px;animation:none;box-shadow:none;text-shadow:none;letter-spacing:0}#showWidgetBtn:hover{background:#282036;transform:none;box-shadow:none}
+#supportPreviewBackdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.76);z-index:9998}#widgetContainer{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:min(900px,calc(100vw - 32px));max-width:none;min-width:0;max-height:calc(100dvh - 32px);z-index:9999;border:1px solid #443357;border-radius:14px;background:#161625;box-shadow:0 28px 90px #0009;overflow:hidden}#widgetContainer .header-bar{background:#1d192d;color:#e2dafa;min-height:52px;padding:12px 16px;border-bottom:1px solid #393049}#widgetContainer .header-bar span{font-family:inherit;color:#e2dafa;font-size:11px;letter-spacing:2px}#widgetContainer .header-bar button{color:#e2dafa;background:none}#widgetContainer iframe{display:block;width:100%;height:712px;filter:none;border:0}#widgetContainer{overflow-y:auto;overscroll-behavior:contain}#widgetContainer .footer-note{background:#161625;color:#94a3b8;padding:12px;font-family:inherit;font-size:11px;text-align:center;line-height:1.8}.support-preview-fallback{color:#c4b5fd}body.support-preview-open{overflow:hidden}
+.paypal-checkout-section{background:#161625;border:1px solid var(--pulse-line);border-radius:12px;box-shadow:none;margin-top:24px}.paypal-checkout-section:hover{box-shadow:none;transform:none}.paypal-checkout-section .checkout-body{flex-wrap:wrap}.server-join-cta,.footer-server-link{display:inline-flex;align-items:center;gap:7px;color:#e2dafa;border:1px solid #443357;border-radius:8px;padding:10px 14px;text-decoration:none;font-size:11px}.site-footer{padding:24px 0;margin-top:28px;border-top:1px solid var(--pulse-line);background:none}.site-footer-main{display:flex;justify-content:space-between;gap:20px;align-items:center}.site-footer-brand{display:flex;gap:12px;align-items:center}.footer-brand-mark{color:#a78bfa;font-size:26px;font-weight:800}.site-footer-brand strong{font-size:14px;color:#e2dafa}.site-footer-brand p{font-size:10px;color:#94a3b8;line-height:1.8}.site-footer-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px}.site-footer-links a{font-size:10px;color:#a5a5bd;text-decoration:none}.site-footer-bottom{display:flex;justify-content:space-between;gap:12px;font-size:9px;color:#77748e;margin-top:20px;padding-top:15px;border-top:1px solid #242131}.patreon-footer{text-align:center;font-size:11px;padding:14px;color:#f5c7df}.panel{min-width:0;animation:none}.skeleton{border-radius:12px}.panel:not(.active){display:none!important}
+:focus-visible{outline:2px solid #c4b5fd;outline-offset:4px}button,input,textarea,select{font-family:inherit}img{max-width:100%}.post-card,.create-post,.stats-dashboard{backdrop-filter:none}.patreon-hearts-container{display:none}.pulse-main .panel-patreon{overflow:hidden}
+@media(min-width:1700px){.pulse-workspace{grid-template-columns:220px minmax(0,1fr) 280px;gap:40px}}
+@media(max-width:1150px){.app-container{padding:0 22px}.pulse-workspace{grid-template-columns:180px minmax(0,1fr);gap:24px}.pulse-community{position:static;grid-column:2;display:grid;grid-template-columns:1fr 1fr;align-items:start}.header .brand{min-width:180px}.header-edition{display:none}.pulse-sidebar{grid-row:1/3}.hero-copy h2{font-size:44px}}
+@media(max-width:700px){.tabs-container{flex-wrap:nowrap}html{scroll-padding-top:20px}.app-container{padding:0 16px}.header{padding:17px 0;gap:12px;flex-wrap:wrap;min-height:0}.header .brand{min-width:0;flex:1}.header-controls{flex:0 0 100%;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:7px}.header-controls input[type=search],.header-controls input[type=search]:focus{width:100%;font-size:12px;min-width:0}.header-controls select{font-size:11px;padding:9px 27px 9px 10px;background-position:right 9px center}.auth-btn{padding:7px 10px;font-size:11px}.pulse-workspace{display:flex;flex-direction:column;gap:22px;padding-top:17px}.pulse-sidebar{position:static;width:100%;display:flex;gap:0}.pulse-sidebar>.rail-label,.sidebar-intro{display:none}.tabs-container{display:flex;flex-direction:row;overflow-x:auto;gap:6px;padding:0 0 8px;scrollbar-width:thin}.tabs-container .tab-btn{width:auto;flex:0 0 auto;padding:10px 12px;font-size:11px;min-height:38px}.tabs-container .tab-btn.active::after{display:none}#tipButtonContainer{margin-top:4px}#showWidgetBtn{font-size:11px;padding:9px}.pulse-main{width:100%}.pulse-hero{padding:0 0 22px}.hero-kicker{font-size:9px}.hero-copy h2{font-size:38px;letter-spacing:-1.6px}.hero-copy p{font-size:12px}.hero-actions{margin-top:14px}.pulse-hero::after{padding-top:17px;font-size:8px}.ticker-wrapper{margin-bottom:22px}.feed-heading h2{font-size:16px}.feed-heading span{font-size:8px}.create-post{padding:14px}.create-post .form-row{flex-wrap:wrap}.create-post .form-row input{min-width:120px}.post-card{padding:17px}.issue-series{font-size:7px;letter-spacing:1.3px}.issue-number strong{font-size:17px}.pulse-community{display:flex;flex-direction:column;width:100%;gap:16px}.community-card{width:100%}.stats-dashboard{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.stat-label{font-size:8px;letter-spacing:.4px}.stat-value{font-size:20px}.site-footer-main{align-items:start}.footer-server-link{font-size:10px;white-space:nowrap;padding:8px}.site-footer-bottom{flex-wrap:wrap}.paypal-checkout-section .checkout-body{display:flex;flex-direction:column}.paypal-checkout-section .checkout-body>*{width:100%;min-width:0}.post-card .post-title{font-size:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+    
+#widgetContainer{animation:none!important}.stat-item{animation:none!important}.pulse-sidebar{align-self:start}
+
+/* ===== PULSE PLAYFUL POLISH ===== */
+.pulse-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,32%);align-items:center;gap:clamp(18px,3vw,42px);padding:18px 0 26px;overflow:visible}
+.pulse-hero::after{grid-column:1/-1;padding-top:3px}
+.pulse-hero::before{content:"";position:absolute;width:260px;height:210px;right:8%;top:8%;background:radial-gradient(ellipse,rgba(167,139,250,.12),transparent 68%);filter:blur(12px);pointer-events:none;z-index:-1}
+.hero-copy{position:relative;z-index:1}
+.hero-art{display:block;position:relative;justify-self:end;width:min(100%,310px);margin:0;padding:7px;border:1px solid rgba(196,181,253,.2);border-radius:18px;background:linear-gradient(145deg,rgba(167,139,250,.12),rgba(244,114,182,.07));box-shadow:0 18px 48px rgba(0,0,0,.28),0 0 36px rgba(167,139,250,.09);animation:mascot-float 6s ease-in-out infinite;transform-origin:center}
+.hero-art img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px}
+.hero-art figcaption{position:absolute;left:16px;bottom:16px;padding:7px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(16,14,28,.84);color:#e8ddff;font-size:9px;letter-spacing:.35px;backdrop-filter:blur(8px)}
+.hero-art figcaption span{color:#f472b6;margin-right:5px}
+.hero-button{position:relative;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+.hero-button-primary{box-shadow:0 7px 22px rgba(167,139,250,.18)}
+.hero-button-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(167,139,250,.3);background:#b9a5ff}
+.hero-button-secondary:hover{transform:translateY(-2px);background:rgba(167,139,250,.1);border-color:#76649b}
+.community-promo{overflow:hidden;position:relative;border:1px solid rgba(244,114,182,.19);border-radius:14px;background:linear-gradient(145deg,#1b1728,#141421 72%);box-shadow:0 12px 32px rgba(0,0,0,.18);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.community-promo:hover{transform:translateY(-3px);border-color:rgba(244,114,182,.38);box-shadow:0 18px 38px rgba(0,0,0,.28),0 0 28px rgba(244,114,182,.08)}
+.community-promo>img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#171426}
+.community-promo-copy{padding:15px 16px 16px}
+.promo-eyebrow{display:block;margin-bottom:7px;color:#f0a4d0;font-size:8px;font-weight:750;letter-spacing:1.8px}
+.community-promo-copy strong{display:block;color:#f0eaff;font-size:14px;letter-spacing:-.25px}
+.community-promo-copy p{margin:7px 0 12px;color:#a5a1b7;font-size:10px;line-height:1.65}
+.community-promo-copy button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:9px 10px;border:1px solid rgba(196,181,253,.2);border-radius:8px;background:rgba(167,139,250,.1);color:#ded4ff;font:600 10px Inter,system-ui,sans-serif;cursor:pointer;transition:background .2s ease,transform .2s ease}
+.community-promo-copy button:hover{background:rgba(167,139,250,.2);transform:translateY(-1px)}
+.community-promo-copy button span{font-size:14px;color:#f4a5d2}
+.post-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease,background .22s ease}
+.post-card:hover{transform:translateY(-2px);background:#1a192a;border-color:rgba(196,181,253,.36);box-shadow:0 12px 30px rgba(0,0,0,.18)}
+.community-card,.create-post{transition:border-color .22s ease,box-shadow .22s ease}
+.community-card:hover,.create-post:focus-within{border-color:rgba(196,181,253,.28);box-shadow:0 10px 28px rgba(0,0,0,.14)}
+.header{animation:pulse-enter .55s cubic-bezier(.2,.7,.2,1) both}
+.pulse-sidebar{animation:pulse-enter .58s .06s cubic-bezier(.2,.7,.2,1) both}
+.pulse-main{animation:pulse-enter .62s .1s cubic-bezier(.2,.7,.2,1) both}
+.pulse-community{animation:pulse-enter .62s .16s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pulse-enter{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@keyframes mascot-float{0%,100%{transform:translateY(0) rotate(.35deg)}50%{transform:translateY(-7px) rotate(-.35deg)}}
+.hero-live-dot{box-shadow:0 0 0 4px rgba(244,114,182,.1),0 0 13px rgba(244,114,182,.55);animation:dot-breathe 2.4s ease-in-out infinite}
+@keyframes dot-breathe{0%,100%{box-shadow:0 0 0 3px rgba(244,114,182,.08),0 0 8px rgba(244,114,182,.3)}50%{box-shadow:0 0 0 6px rgba(244,114,182,.02),0 0 17px rgba(244,114,182,.56)}}
+@media(max-width:1150px){.community-promo{grid-column:1/-1;display:grid;grid-template-columns:minmax(150px,.8fr) 1fr;align-items:stretch}.community-promo>img{height:100%;aspect-ratio:auto}.community-promo-copy{align-self:center}}
+@media(max-width:700px){.pulse-hero{grid-template-columns:minmax(0,1fr);gap:16px;padding:0 0 22px}.hero-art{justify-self:center;width:min(100%,390px);animation-duration:7s}.hero-art img{aspect-ratio:16/9}.pulse-hero::before{right:4%;top:18%;width:190px;height:150px}.community-promo{display:block}.community-promo>img{aspect-ratio:16/9}.post-card:hover{transform:none}.community-promo:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.hero-art,.hero-live-dot,.header,.pulse-sidebar,.pulse-main,.pulse-community{animation:none!important}.hero-button,.post-card,.community-card,.create-post,.community-promo,.community-promo-copy button{transition:none!important}.post-card:hover,.community-promo:hover{transform:none}}
+
+
+/* ===== BOLDER, MULTI-ACCENT COLOR SYSTEM ===== */
+:root{--pulse-cyan:#4de1d2;--pulse-coral:#ff906e;--pulse-sun:#ffd166;--pulse-blue:#69a9ff;--pulse-mint:#75e0a7;--pulse-rose:#ff79ad;--pulse-ink:#0b1119;--pulse-card:#141923}
+body{background-color:var(--pulse-ink);background-image:radial-gradient(ellipse at 16% 9%,rgba(77,225,210,.105),transparent 31%),radial-gradient(ellipse at 82% 19%,rgba(255,121,173,.095),transparent 29%),radial-gradient(ellipse at 78% 82%,rgba(255,209,102,.055),transparent 30%),linear-gradient(180deg,#0b1119,#0e101a 48%,#10111a);color:#f4f5f8}
+.header{background:linear-gradient(90deg,rgba(77,225,210,.055),transparent 34%,rgba(255,121,173,.045));border-bottom-color:rgba(77,225,210,.22)}
+.header .brand-mark{background:linear-gradient(135deg,var(--pulse-cyan),var(--pulse-sun),var(--pulse-rose));box-shadow:0 0 24px rgba(77,225,210,.2)}
+.header h1{background-image:linear-gradient(100deg,var(--pulse-cyan),#d6b4ff 46%,var(--pulse-rose));background-clip:text;-webkit-background-clip:text}
+.header-edition{border-left-color:rgba(255,144,110,.35);color:#b8c2cf}
+.header-controls input[type=search],.header-controls select,.auth-btn{background-color:#151b24;border-color:rgba(255,255,255,.09)}
+.header-controls input[type=search]:focus{border-color:var(--pulse-cyan);box-shadow:0 0 0 3px rgba(77,225,210,.11)}
+.auth-btn:hover{border-color:rgba(255,209,102,.55);color:#ffe3a0}
+.rail-label{color:#93a9b7}
+.tabs-container .tab-btn{transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.tabs-container .tab-btn:hover{transform:translateX(3px);background:rgba(255,255,255,.045);color:#fff}
+.tabs-container .tab-btn[data-tab="public"]{--tab-color:var(--pulse-cyan);--tab-bg:rgba(77,225,210,.13)}
+.tabs-container .tab-btn[data-tab="members"]{--tab-color:var(--pulse-coral);--tab-bg:rgba(255,144,110,.14)}
+.tabs-container .tab-btn[data-tab="subscribers"]{--tab-color:var(--pulse-sun);--tab-bg:rgba(255,209,102,.14)}
+.tabs-container .tab-btn[data-tab="patreon"]{--tab-color:var(--pulse-rose);--tab-bg:rgba(255,121,173,.14)}
+#donateTabBtn{--tab-color:var(--pulse-mint);--tab-bg:rgba(117,224,167,.14)}
+.tabs-container .tab-btn.admin-tab{--tab-color:#b9a0ff;--tab-bg:rgba(185,160,255,.16)}
+.tabs-container .tab-btn.active{color:var(--tab-color,#f4f5f8);background:var(--tab-bg,rgba(255,255,255,.1));border-color:color-mix(in srgb,var(--tab-color,#fff) 36%,transparent);box-shadow:inset 3px 0 var(--tab-color,#fff),0 7px 20px color-mix(in srgb,var(--tab-color,#fff) 10%,transparent)}
+.hero-kicker{color:var(--pulse-coral)}
+.hero-live-dot{background:var(--pulse-coral)}
+.hero-copy h2 span{color:var(--pulse-cyan)}
+.hero-copy p{color:#b4bdca}
+.hero-art{border-color:rgba(77,225,210,.3);background:linear-gradient(145deg,rgba(77,225,210,.14),rgba(255,144,110,.14),rgba(255,121,173,.1));box-shadow:0 18px 48px rgba(0,0,0,.3),0 0 34px rgba(77,225,210,.1)}
+.hero-art figcaption{border-color:rgba(77,225,210,.36);color:#d9fff5}
+.hero-art figcaption span{color:var(--pulse-sun)}
+.hero-button-primary{background:linear-gradient(115deg,var(--pulse-cyan),#8de5a7);color:#08211e;box-shadow:0 7px 24px rgba(77,225,210,.2)}
+.hero-button-primary:hover{background:linear-gradient(115deg,#8bf0e5,#b7f18b);box-shadow:0 10px 28px rgba(77,225,210,.3)}
+.hero-button-secondary{color:#ffc19f;border-color:rgba(255,144,110,.4)}
+.hero-button-secondary:hover{background:rgba(255,144,110,.12);border-color:var(--pulse-coral)}
+.ticker-wrapper{background:linear-gradient(90deg,rgba(77,225,210,.07),rgba(105,169,255,.04) 48%,rgba(255,121,173,.07));border-top-color:rgba(77,225,210,.25);border-bottom-color:rgba(255,121,173,.22)}
+.ticker-icon{color:var(--pulse-sun)!important;background:rgba(255,209,102,.12)!important}
+.ticker-item .highlight{color:var(--pulse-cyan)}
+.feed-heading{border-bottom-color:rgba(255,144,110,.23)}
+.feed-heading h2{color:#f2f0e8}
+.feed-heading span{color:var(--pulse-sun)}
+.create-post{background:linear-gradient(125deg,rgba(77,225,210,.075),#141923 52%,rgba(105,169,255,.06));border-color:rgba(77,225,210,.28)}
+.create-post:focus-within{border-color:var(--pulse-cyan);box-shadow:0 0 0 3px rgba(77,225,210,.08),0 12px 34px rgba(0,0,0,.22)}
+.create-post input[type=text],.create-post textarea{background:#0e151c;border-color:rgba(77,225,210,.18)}
+.create-post input:focus,.create-post textarea:focus{border-color:var(--pulse-cyan);box-shadow:0 0 0 3px rgba(77,225,210,.09)}
+.create-post .form-actions button,#publishBtn,.load-more-btn{background:linear-gradient(110deg,var(--pulse-coral),var(--pulse-sun));color:#2b170d;box-shadow:0 6px 18px rgba(255,144,110,.16)}
+.create-post .form-actions button:hover,#publishBtn:hover,.load-more-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.post-card{background:linear-gradient(120deg,rgba(255,255,255,.018),#151a24 55%,rgba(255,255,255,.01));border-color:rgba(255,255,255,.1)}
+.post-card.tint-admin{--post-accent:#ff747d;background:linear-gradient(110deg,rgba(255,78,94,.16),#161a24 48%);border-color:rgba(255,116,125,.3)}
+.post-card.tint-mod{--post-accent:#ffab66;background:linear-gradient(110deg,rgba(255,144,80,.16),#171a23 48%);border-color:rgba(255,171,102,.3)}
+.post-card.tint-bot{--post-accent:#ffd166;background:linear-gradient(110deg,rgba(255,209,102,.15),#171a23 48%);border-color:rgba(255,209,102,.3)}
+.post-card.tint-nouser{--post-accent:#75e0a7;background:linear-gradient(110deg,rgba(72,207,139,.16),#151b23 48%);border-color:rgba(117,224,167,.3)}
+.post-card.tint-first{--post-accent:#69a9ff;background:linear-gradient(110deg,rgba(74,144,255,.16),#151a25 48%);border-color:rgba(105,169,255,.32)}
+.post-card.tint-repeat{--post-accent:#bf9cff;background:linear-gradient(110deg,rgba(167,139,250,.16),#171923 48%);border-color:rgba(191,156,255,.3)}
+.post-card.tint-blurred{--post-accent:#ff79ad;background:linear-gradient(110deg,rgba(255,89,161,.15),#191722 48%);border-color:rgba(255,121,173,.32)}
+.post-card.tint-subscriber{--post-accent:#ffd166;background:linear-gradient(110deg,rgba(255,193,71,.16),#191a22 48%);border-color:rgba(255,209,102,.34)}
+.post-card[class*="tint-"]{border-left:4px solid var(--post-accent,#69a9ff)}
+.post-card[class*="tint-"] .issue-number,.post-card[class*="tint-"] .issue-number strong{color:var(--post-accent,#69a9ff)}
+.post-card[class*="tint-"] .issue-masthead{border-bottom-color:color-mix(in srgb,var(--post-accent,#69a9ff) 28%,transparent)}
+.post-card:hover{background-color:#1b202b;border-color:color-mix(in srgb,var(--post-accent,var(--pulse-cyan)) 45%,transparent);box-shadow:0 14px 34px rgba(0,0,0,.24)}
+.community-card{background:linear-gradient(145deg,#151a22,#121720 68%,#171621);border-color:rgba(255,255,255,.12)}
+.pulse-community>.community-card:first-child{border-top:2px solid var(--pulse-cyan);background:linear-gradient(145deg,rgba(77,225,210,.075),#141923 48%,rgba(105,169,255,.055))}
+.pulse-community>.community-guide{border-top:2px solid var(--pulse-rose);background:linear-gradient(145deg,rgba(255,121,173,.07),#151821 50%,rgba(255,209,102,.045))}
+.community-card h2{color:#f4f0e6}
+.community-card>p{color:#b0bac5}
+.stat-item:nth-child(1) .stat-value{color:var(--pulse-cyan)}
+.stat-item:nth-child(2) .stat-value{color:var(--pulse-coral)}
+.stat-item:nth-child(3) .stat-value{color:var(--pulse-rose)}
+.stat-item:nth-child(4) .stat-value{color:var(--pulse-blue)}
+.stat-item:nth-child(5) .stat-value{color:var(--pulse-sun)}
+.stat-item:nth-child(6) .stat-value{color:var(--pulse-mint)}
+.stat-online .stat-value{color:#72f2c3}
+.stat-visitors .stat-value{color:#c5a3ff}
+.stat-item{border-top-color:rgba(255,255,255,.12)}
+.stat-label{color:#b3bec9}
+.roles-legend{border-top-color:rgba(255,209,102,.2)}
+.community-guide .guide-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:rgba(77,225,210,.13);color:var(--pulse-cyan)}
+.community-guide .guide-card:nth-child(2) .guide-icon{background:rgba(255,144,110,.14);color:var(--pulse-coral)}
+.community-guide .guide-card:nth-child(3) .guide-icon{background:rgba(255,209,102,.14);color:var(--pulse-sun)}
+.community-guide .guide-card:nth-child(4) .guide-icon{background:rgba(255,121,173,.14);color:var(--pulse-rose)}
+.guide-card{border-top-color:rgba(255,255,255,.1)}
+.guide-card:hover{background:rgba(255,255,255,.035)}
+.guide-card-copy strong{color:#f3f1e9}
+.guide-arrow{color:var(--pulse-coral)}
+.community-promo{background:linear-gradient(145deg,rgba(255,144,110,.18),#171923 55%,rgba(255,209,102,.12));border-color:rgba(255,144,110,.38)}
+.community-promo:hover{border-color:var(--pulse-sun);box-shadow:0 18px 38px rgba(0,0,0,.28),0 0 28px rgba(255,144,110,.12)}
+.promo-eyebrow{color:var(--pulse-sun)}
+.community-promo-copy strong{color:#fff0dc}
+.community-promo-copy button{background:linear-gradient(100deg,rgba(255,144,110,.16),rgba(255,209,102,.14));border-color:rgba(255,209,102,.28);color:#ffe2b0}
+.community-promo-copy button:hover{background:linear-gradient(100deg,rgba(255,144,110,.26),rgba(255,209,102,.24))}
+.community-promo-copy button span{color:var(--pulse-cyan)}
+#showWidgetBtn{background:linear-gradient(105deg,rgba(255,121,173,.17),rgba(255,144,110,.16),rgba(255,209,102,.13));border-color:rgba(255,144,110,.34);color:#ffe3d2}
+#showWidgetBtn:hover{background:linear-gradient(105deg,rgba(255,121,173,.25),rgba(255,144,110,.24),rgba(255,209,102,.19))}
+.paypal-checkout-section{background:linear-gradient(120deg,rgba(255,121,173,.08),#151923 48%,rgba(77,225,210,.08));border-color:rgba(255,121,173,.25)}
+.paypal-checkout-section .checkout-header .icon-wrap{background:rgba(255,121,173,.16);color:var(--pulse-rose)}
+.site-footer{border-top-color:rgba(77,225,210,.22)}
+.site-footer-brand strong{color:var(--pulse-cyan)}
+.footer-brand-mark{color:var(--pulse-coral)}
+.server-join-cta,.footer-server-link{border-color:rgba(255,209,102,.3);color:#ffe3a0}
+.site-footer-links a:nth-child(1){color:var(--pulse-cyan)}
+.site-footer-links a:nth-child(2){color:var(--pulse-coral)}
+.site-footer-links a:nth-child(3){color:var(--pulse-sun)}
+.site-footer-links a:nth-child(4){color:var(--pulse-blue)}
+:focus-visible{outline-color:var(--pulse-sun)}
+@media(max-width:700px){.tabs-container .tab-btn.active{box-shadow:inset 0 -3px var(--tab-color,#fff),0 5px 15px color-mix(in srgb,var(--tab-color,#fff) 10%,transparent)}.post-card[class*="tint-"]{background-size:auto}}
+
+
+/* Keep color visible even when controls are inactive, and carry the palette into secondary spaces. */
+.tabs-container .tab-btn[data-tab]:not(.active){color:color-mix(in srgb,var(--tab-color) 82%,#d7dbe0)}
+.tabs-container .tab-btn[data-tab]:not(.active):hover{background:var(--tab-bg);border-color:color-mix(in srgb,var(--tab-color) 28%,transparent)}
+#donateTabBtn{color:#9ce9bc}
+#donateTabBtn:hover{background:rgba(117,224,167,.14);border-color:rgba(117,224,167,.3)}
+.upload-row .file-upload .file-label{background:rgba(105,169,255,.12);border:1px solid rgba(105,169,255,.34);color:#b7d5ff}
+.upload-row .file-upload .file-label:hover{background:rgba(105,169,255,.2)}
+.patreon-card:nth-child(3n+1){background:linear-gradient(145deg,rgba(255,144,110,.15),#171923 68%);border-color:rgba(255,144,110,.3)}
+.patreon-card:nth-child(3n+2){background:linear-gradient(145deg,rgba(255,209,102,.13),#171923 68%);border-color:rgba(255,209,102,.29)}
+.patreon-card:nth-child(3n){background:linear-gradient(145deg,rgba(77,225,210,.13),#171923 68%);border-color:rgba(77,225,210,.28)}
+.patreon-post-card:nth-child(3n+1){border-left:3px solid var(--pulse-coral)}
+.patreon-post-card:nth-child(3n+2){border-left:3px solid var(--pulse-cyan)}
+.patreon-post-card:nth-child(3n){border-left:3px solid var(--pulse-sun)}
+
+
+/* Full-viewport, low-opacity slideshow sourced from uploaded forum photos. */
+body{isolation:isolate}
+#communityImageSlideshow{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#0b1119}
+#communityImageSlideshow::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,20,.42),rgba(8,12,20,.38) 48%,rgba(8,12,20,.54));pointer-events:none}
+.community-background-slide{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;opacity:0;filter:saturate(.82) blur(.6px);transform:scale(1.035);transition:opacity 1.35s ease;will-change:opacity}
+.community-background-slide.is-visible{opacity:.2}
+.app-container{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.community-background-slide{transition:none}}
+
+</style>
 </head>
-<body>
-
-    <!-- ===== INTRO OVERLAY ===== -->
-    <div id="intro-overlay">
-        <div class="intro-title">✨ Pulse</div>
-        <div class="intro-sub">Your universe awaits</div>
-        <div class="intro-loader"></div>
-    </div>
-
-    <!-- ===== LOGIN MODAL ===== -->
-    <div id="loginModal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close-btn" id="loginModalClose">&times;</button>
-            <h2 id="authTitle">Welcome Back</h2>
-            <div class="form-group">
-                <label for="loginEmail">Email</label>
-                <input type="email" id="loginEmail" placeholder="you@example.com" />
-            </div>
-            <div class="form-group">
-                <label for="loginPassword">Password</label>
-                <input type="password" id="loginPassword" placeholder="••••••••" />
-            </div>
-            <div class="modal-error" id="loginError"></div>
-            <div class="modal-actions">
-                <button class="btn-primary" id="loginSignInBtn">Sign In</button>
-                <button class="btn-secondary" id="loginSignUpBtn">Sign Up</button>
-            </div>
-            <div style="text-align:center;margin-top:0.8rem;font-size:0.8rem;color:#94a3b8;" id="authSwitchText">
+<body><div aria-labelledby="supportPreviewTitle" aria-modal="true" id="widgetContainer" role="dialog" tabindex="-1">
+<div class="header-bar">
+<span id="supportPreviewTitle">SUPPORT PULSE</span>
+<button aria-label="Close support preview" id="closeWidgetBtn" type="button">✕</button>
+</div>
+<iframe id='kofiframe' src='https://ko-fi.com/patreonsfw/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='patreonsfw'></iframe>
+<div class="footer-note">Your support keeps the content flowing <span aria-hidden="true">·</span> <a class="support-preview-fallback" href="https://ko-fi.com/patreonsfw" rel="noopener noreferrer" target="_blank">Open Ko-fi in a new tab <i aria-hidden="true" class="fas fa-arrow-up-right-from-square"></i></a></div>
+</div><div aria-hidden="true" id="supportPreviewBackdrop"></div>
+<!-- ===== INTRO OVERLAY ===== -->
+<!-- ===== LOGIN MODAL ===== -->
+<div class="modal-overlay" id="loginModal">
+<div class="modal-content">
+<button class="modal-close-btn" id="loginModalClose">×</button>
+<h2 id="authTitle">Welcome Back</h2>
+<div class="form-group">
+<label for="loginEmail">Email</label>
+<input id="loginEmail" placeholder="you@example.com" type="email"/>
+</div>
+<div class="form-group">
+<label for="loginPassword">Password</label>
+<input id="loginPassword" placeholder="••••••••" type="password"/>
+</div>
+<div class="modal-error" id="loginError"></div>
+<div class="modal-actions">
+<button class="btn-primary" id="loginSignInBtn">Sign In</button>
+<button class="btn-secondary" id="loginSignUpBtn">Sign Up</button>
+</div>
+<div id="authSwitchText" style="text-align:center;margin-top:0.8rem;font-size:0.8rem;color:#94a3b8;">
                 Don't have an account? <a id="authSwitchLink" style="color:#a78bfa;cursor:pointer;">Sign Up</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== SHORTCUTS MODAL ===== -->
-    <div id="shortcutsModal" class="modal-overlay">
-        <div class="modal-content">
-            <h2><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h2>
-            <div class="shortcut-grid">
-                <span class="key"><kbd>?</kbd></span><span class="desc">Toggle help</span>
-                <span class="key"><kbd>Esc</kbd></span><span class="desc">Close modal / search</span>
-                <span class="key"><kbd>⌘K</kbd> or <kbd>Ctrl+K</kbd></span><span class="desc">Focus search</span>
-                <span class="key"><kbd>j</kbd> / <kbd>k</kbd></span><span class="desc">Navigate posts</span>
-                <span class="key"><kbd>n</kbd></span><span class="desc">New post focus</span>
-            </div>
-            <button class="modal-close" id="modalCloseBtn">Close</button>
-        </div>
-    </div>
-
-    <!-- ===== FULLSCREEN LIGHTBOX ===== -->
-    <div id="lightboxOverlay">
-        <button class="lb-close" id="lbClose" title="Close (Esc)">✕</button>
-        <button class="lb-nav lb-prev" id="lbPrev" title="Previous (←)">‹</button>
-        <button class="lb-nav lb-next" id="lbNext" title="Next (→)">›</button>
-        <div class="lb-image-container" id="lbImageContainer">
-            <img id="lbImage" src="" alt="Fullscreen image" />
-        </div>
-        <div class="lb-counter" id="lbCounter">1 / 1</div>
-    </div>
-
-    <!-- ===== APP ===== -->
-    <div class="app-container">
-
-        <!-- HEADER -->
-        <div class="header">
-            <a class="brand" href="#">
-                <img src="https://ui-avatars.com/api/?name=Pulse&size=38&background=a78bfa&color=fff&bold=true&font-size=0.5" alt="Pulse Logo" />
-                <h1><i class="fas fa-bolt"></i> Pulse</h1>
-            </a>
-            <div class="header-controls">
-                <input type="search" id="searchInput" placeholder="Search posts..." />
-                <select id="sortSelect">
-                    <option value="new">Newest</option>
-                    <option value="trending">Trending</option>
-                    <option value="random">Random</option>
-                </select>
-                <button id="authBtn" class="auth-btn auth-login">
-                    <i class="fas fa-sign-in-alt"></i> Login
+</div>
+</div>
+</div>
+<!-- ===== SHORTCUTS MODAL ===== -->
+<div class="modal-overlay" id="shortcutsModal">
+<div class="modal-content">
+<h2><i class="fas fa-keyboard"></i> Keyboard Shortcuts</h2>
+<div class="shortcut-grid">
+<span class="key"><kbd>?</kbd></span><span class="desc">Toggle help</span>
+<span class="key"><kbd>Esc</kbd></span><span class="desc">Close modal / search</span>
+<span class="key"><kbd>⌘K</kbd> or <kbd>Ctrl+K</kbd></span><span class="desc">Focus search</span>
+<span class="key"><kbd>j</kbd> / <kbd>k</kbd></span><span class="desc">Navigate posts</span>
+<span class="key"><kbd>n</kbd></span><span class="desc">New post focus</span>
+</div>
+<button class="modal-close" id="modalCloseBtn">Close</button>
+</div>
+</div>
+<!-- ===== FULLSCREEN LIGHTBOX ===== -->
+<div id="lightboxOverlay">
+<button class="lb-close" id="lbClose" title="Close (Esc)">✕</button>
+<button class="lb-nav lb-prev" id="lbPrev" title="Previous (←)">‹</button>
+<button class="lb-nav lb-next" id="lbNext" title="Next (→)">›</button>
+<div class="lb-image-container" id="lbImageContainer">
+<img alt="Fullscreen image" decoding="async" id="lbImage" src=""/>
+</div>
+<div class="lb-counter" id="lbCounter">1 / 1</div>
+</div>
+<!-- ===== APP ===== -->
+<div class="app-container"><div class="header">
+<a class="brand" href="#">
+<span aria-hidden="true" class="brand-mark">ϟ</span>
+<h1><i class="fas fa-bolt"></i> Pulse</h1>
+</a><div class="header-edition">INDEPENDENT VOICES.<br/>ONE SHARED SPACE.</div>
+<div class="header-controls">
+<input id="searchInput" placeholder="Search posts..." type="search"/>
+<select id="sortSelect">
+<option value="new">Newest</option>
+<option value="trending">Trending</option>
+<option value="random">Random</option>
+</select>
+<button class="auth-btn auth-login" id="authBtn">
+<i class="fas fa-sign-in-alt"></i> Login
                 </button>
-            </div>
-        </div>
+</div>
+</div><div class="pulse-workspace"><aside aria-label="Community navigation" class="pulse-sidebar"><div class="rail-label">YOUR SPACES</div><div aria-label="Community spaces" class="tabs-container">
+<button class="tab-btn active" data-tab="public">◉  Public feed</button>
+<button class="tab-btn" data-tab="members">▧  Members</button>
+<button class="tab-btn" data-tab="subscribers">☆  Subscribers</button>
+<!-- DONATE TAB BUTTON -->
+<button class="tab-btn" id="donateTabBtn">♡ Donate</button>
+<button class="tab-btn patreon-tab" data-tab="patreon">✿  Patreon+</button>
+<button class="tab-btn admin-tab" data-tab="admin" id="adminTabBtn">◇  Admin Inbox</button>
+</div><div id="tipButtonContainer">
+<button aria-controls="widgetContainer" aria-expanded="false" id="showWidgetBtn" type="button">♡  Support Us</button>
 
-        <!-- ===== TICKER ===== -->
-        <div class="ticker-wrapper" id="tickerWrapper">
-            <div class="ticker-icon">
-                <img src="https://ui-avatars.com/api/?name=✨&size=24&background=1a1a2e&color=a78bfa&bold=true" alt="✨" />
-            </div>
-            <div class="ticker-content" id="tickerContent">
-                <span class="ticker-item">✨ Welcome to Pulse · Stay connected</span>
-                <span class="ticker-item">📊 Loading stats...</span>
-                <span class="ticker-item">🚀 Your universe awaits</span>
-            </div>
-        </div>
 
-        <!-- ===== SUPPORT WIDGET ===== -->
-        <div id="tipButtonContainer">
-            <button id="showWidgetBtn">✨ Support Us ✨</button>
-            <div id="widgetContainer">
-                <div class="header-bar">
-                    <span>🌙 DARK MODE • SUPPORT US</span>
-                    <button id="closeWidgetBtn">✕</button>
-                </div>
-                <iframe id='kofiframe' src='https://ko-fi.com/patreonplus/?hidefeed=true&widget=true&embed=true&preview=true' title='patreonplus'></iframe>
-                <div class="footer-note">⚡ Your support keeps the content flowing</div>
-            </div>
-        </div>
-
-        <!-- ===== STATS ===== -->
-        <div class="stats-dashboard" id="statsDashboard">
-            <div class="stat-item">
-                <div class="stat-icon"><i class="fas fa-pen-fancy"></i></div>
-                <div class="stat-value" id="statPosts">-</div>
-                <div class="stat-label">Posts</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-icon"><i class="fas fa-reply"></i></div>
-                <div class="stat-value" id="statReplies">-</div>
-                <div class="stat-label">Replies</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-icon"><i class="fas fa-crown"></i></div>
-                <div class="stat-value" id="statAdmins">-</div>
-                <div class="stat-label">Admins</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
-                <div class="stat-value" id="statMods">-</div>
-                <div class="stat-label">Mods</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-icon"><i class="fas fa-robot"></i></div>
-                <div class="stat-value" id="statBots">-</div>
-                <div class="stat-label">Bots</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-icon"><i class="fas fa-users"></i></div>
-                <div class="stat-value" id="statUsers">-</div>
-                <div class="stat-label">Users</div>
-            </div>
-            <div class="stat-item stat-online">
-                <div class="stat-icon"><i class="fas fa-circle" style="color:#34d399;font-size:0.65rem;"></i></div>
-                <div class="stat-value" id="statOnline">-</div>
-                <div class="stat-label">Online</div>
-            </div>
-            <div class="stat-item stat-visitors">
-                <div class="stat-icon"><i class="fas fa-globe"></i></div>
-                <div class="stat-value" id="statVisitors">-</div>
-                <div class="stat-label">Total Visitors</div>
-            </div>
-        </div>
-
-        <!-- ===== ROLES LEGEND ===== -->
-        <div class="roles-legend">
-            <span class="role"><span class="color-dot" style="background:#ef4444;"></span> Admin</span>
-            <span class="role"><span class="color-dot" style="background:#f97316;"></span> Mod</span>
-            <span class="role"><span class="color-dot" style="background:#eab308;"></span> Bot</span>
-            <span class="role"><span class="color-dot" style="background:#22c55e;"></span> Anonymous</span>
-            <span class="role"><span class="color-dot" style="background:#3b82f6;"></span> First Time</span>
-            <span class="role"><span class="color-dot" style="background:#a855f7;"></span> Regular</span>
-            <span class="role"><span class="color-dot" style="background:#ec4899;"></span> Blurred</span>
-            <span class="role"><span class="color-dot" style="background:#fbbf24;"></span> Subscriber</span>
-        </div>
-
-        <!-- ===== TABS ===== -->
-        <div class="tabs-container">
-            <button class="tab-btn active" data-tab="public">🌍 Public</button>
-            <button class="tab-btn" data-tab="members">🔒 Members</button>
-            <button class="tab-btn" data-tab="subscribers">⭐ Subscribers</button>
-            <!-- DONATE TAB BUTTON -->
-            <button class="tab-btn" id="donateTabBtn">💝 Donate</button>
-            <button class="tab-btn patreon-tab" data-tab="patreon">🌸 Patreon+</button>
-            <button class="tab-btn admin-tab" data-tab="admin" id="adminTabBtn">🛡️ Admin Inbox</button>
-        </div>
-
-        <!-- ===== PANEL: PUBLIC ===== -->
-        <div class="panel active" id="panel-public">
-            <div class="create-post" data-category="public">
-                <div class="form-row">
-                    <input type="text" id="titleInput" placeholder="Post title..." style="flex:1.5;" />
-                    <input type="text" id="usernameInput" placeholder="Username (optional)" style="flex:1;" />
-                </div>
-                <textarea id="postInput" placeholder="What's on your mind? Use #hashtags ✨" rows="2"></textarea>
-                <div class="upload-row" id="uploadRow">
-                    <div class="file-upload">
-                        <input type="file" id="mediaFileInput" accept="image/*" />
-                        <label for="mediaFileInput" class="file-label">
-                            <i class="fas fa-upload"></i> <span id="fileLabelText">Choose Image</span>
-                        </label>
-                        <img id="imagePreview" class="image-preview" alt="Preview" />
-                    </div>
-                    <label class="blur-check">
-                        <input type="checkbox" id="blurToggle" />
-                        <i class="fas fa-eye-slash"></i> Blur
+</div><div class="sidebar-intro"><strong>A little more human.</strong>Share what moves you. Find a familiar voice. Make this corner your own.</div></aside><main class="pulse-main" id="mainContent"><section aria-labelledby="pulseHeroTitle" class="pulse-hero">
+<div class="hero-copy">
+<div class="hero-kicker"><span class="hero-live-dot"></span> YOUR DAILY DOSE OF CONNECTION</div>
+<h2 id="pulseHeroTitle">Small moments.<br/><span>Shared stories.</span></h2>
+<p>A thought, a photo, a conversation worth staying for. Discover the latest from the Pulse community — or add your own voice.</p>
+<div class="hero-actions">
+<a class="hero-button hero-button-primary" href="#panel-public" onclick="document.querySelector('.tab-btn[data-tab=public]').click()"><i aria-hidden="true" class="fas fa-arrow-down"></i> Explore the feed</a>
+<a class="hero-button hero-button-secondary" href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer" rel="noopener noreferrer">Support the community ↗</a>
+</div>
+</div>
+<figure class="hero-art"><img src="pulse-potato-hero.webp" alt="A cheerful potato mascot in headphones posting from a laptop" decoding="async" fetchpriority="high"/><figcaption><span aria-hidden="true">✦</span> The unofficial community potato</figcaption></figure>
+</section><div class="ticker-wrapper" id="tickerWrapper">
+<div class="ticker-icon">✦</div>
+<div class="ticker-content" id="tickerContent">
+<span class="ticker-item">✨ Welcome to Pulse · Stay connected</span>
+<span class="ticker-item">📊 Loading stats...</span>
+<span class="ticker-item">🚀 Your universe awaits</span>
+</div>
+</div><div class="feed-heading"><h2 id="currentSpaceTitle">The public edit</h2><span>VOICES / STORIES / IDEAS</span></div><div class="panel active" id="panel-public">
+<div class="create-post" data-category="public">
+<div class="form-row">
+<input id="titleInput" placeholder="Post title..." style="flex:1.5;" type="text"/>
+<input id="usernameInput" placeholder="Username (optional)" style="flex:1;" type="text"/>
+</div>
+<textarea id="postInput" placeholder="What's on your mind? Use #hashtags ✨" rows="2"></textarea>
+<div class="upload-row" id="uploadRow">
+<div class="file-upload">
+<input accept="image/*" id="mediaFileInput" type="file"/>
+<label class="file-label" for="mediaFileInput">
+<i class="fas fa-upload"></i> <span id="fileLabelText">Choose Image</span>
+</label>
+<img alt="Preview" class="image-preview" decoding="async" id="imagePreview"/>
+</div>
+<label class="blur-check">
+<input id="blurToggle" type="checkbox"/>
+<i class="fas fa-eye-slash"></i> Blur
                     </label>
-                    <span class="upload-hint" id="uploadHint"></span>
-                </div>
-                <div class="form-actions">
-                    <div class="left">
-                        <span style="font-size:0.8rem;color:#475569;"><i class="fas fa-lock"></i> anon</span>
-                    </div>
-                    <button id="publishBtn"><i class="fas fa-paper-plane"></i> Publish</button>
-                </div>
-            </div>
-            <div class="feed-list" id="feedPublic"></div>
-        </div>
-
-        <!-- ===== PANEL: MEMBERS ===== -->
-        <div class="panel" id="panel-members">
-            <div style="background:rgba(255,255,255,0.03); border-radius:16px; padding:1rem; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.04);">
-                <p style="font-size:0.9rem; color:#94a3b8;"><i class="fas fa-lock" style="color:#a78bfa;"></i> This section is for <strong>members only</strong>. You must be logged in to view and post.</p>
-            </div>
-            <div class="create-post" data-category="members" id="membersCreatePost" style="display:none;">
-                <div class="form-row">
-                    <input type="text" id="membersTitleInput" placeholder="Post title..." style="flex:1.5;" />
-                    <input type="text" id="membersUsernameInput" placeholder="Username (optional)" style="flex:1;" />
-                </div>
-                <textarea id="membersPostInput" placeholder="What's on your mind? Use #hashtags ✨" rows="2"></textarea>
-                <div class="upload-row" id="membersUploadRow">
-                    <div class="file-upload">
-                        <input type="file" id="membersMediaFileInput" accept="image/*" />
-                        <label for="membersMediaFileInput" class="file-label">
-                            <i class="fas fa-upload"></i> <span id="membersFileLabelText">Choose Image</span>
-                        </label>
-                        <img id="membersImagePreview" class="image-preview" alt="Preview" />
-                    </div>
-                    <label class="blur-check">
-                        <input type="checkbox" id="membersBlurToggle" />
-                        <i class="fas fa-eye-slash"></i> Blur
+<span class="upload-hint" id="uploadHint"></span>
+</div>
+<div class="form-actions">
+<div class="left">
+<span style="font-size:0.8rem;color:#475569;"><i class="fas fa-lock"></i> anon</span>
+</div>
+<button id="publishBtn"><i class="fas fa-paper-plane"></i> Publish</button>
+</div>
+</div>
+<div class="feed-list" id="feedPublic"></div>
+</div><div class="panel" id="panel-members">
+<div style="background:rgba(255,255,255,0.03); border-radius:16px; padding:1rem; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.04);">
+<p style="font-size:0.9rem; color:#94a3b8;"><i class="fas fa-lock" style="color:#a78bfa;"></i> This section is for <strong>members only</strong>. You must be logged in to view and post.</p>
+</div>
+<div class="create-post" data-category="members" id="membersCreatePost" style="display:none;">
+<div class="form-row">
+<input id="membersTitleInput" placeholder="Post title..." style="flex:1.5;" type="text"/>
+<input id="membersUsernameInput" placeholder="Username (optional)" style="flex:1;" type="text"/>
+</div>
+<textarea id="membersPostInput" placeholder="What's on your mind? Use #hashtags ✨" rows="2"></textarea>
+<div class="upload-row" id="membersUploadRow">
+<div class="file-upload">
+<input accept="image/*" id="membersMediaFileInput" type="file"/>
+<label class="file-label" for="membersMediaFileInput">
+<i class="fas fa-upload"></i> <span id="membersFileLabelText">Choose Image</span>
+</label>
+<img alt="Preview" class="image-preview" decoding="async" id="membersImagePreview"/>
+</div>
+<label class="blur-check">
+<input id="membersBlurToggle" type="checkbox"/>
+<i class="fas fa-eye-slash"></i> Blur
                     </label>
-                    <span class="upload-hint" id="membersUploadHint"></span>
-                </div>
-                <div class="form-actions">
-                    <div class="left">
-                        <span style="font-size:0.8rem;color:#475569;"><i class="fas fa-lock"></i> anon</span>
-                    </div>
-                    <button id="membersPublishBtn"><i class="fas fa-paper-plane"></i> Publish</button>
-                </div>
-            </div>
-            <div id="membersLoginPrompt" style="display:block; text-align:center; padding:2rem; background:rgba(255,255,255,0.03); border-radius:16px; border:1px solid rgba(255,255,255,0.04);">
-                <p style="color:#94a3b8;"><i class="fas fa-lock" style="color:#a78bfa; font-size:2rem; display:block; margin-bottom:0.5rem;"></i> Please <a style="color:#a78bfa; cursor:pointer;" onclick="openLoginModal()">log in</a> to view and post in the Members Only section.</p>
-            </div>
-            <div class="feed-list" id="feedMembers"></div>
-        </div>
-
-        <!-- ===== PANEL: SUBSCRIBERS ===== -->
-        <div class="panel" id="panel-subscribers">
-            <div style="background:rgba(255,255,255,0.03); border-radius:16px; padding:1rem; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.04);">
-                <p style="font-size:0.9rem; color:#94a3b8;"><i class="fas fa-star" style="color:#fbbf24;"></i> This section is for <strong>approved subscribers</strong>. Request access below.</p>
-            </div>
-
-            <!-- Subscriber Request Form -->
-            <div id="subscriberRequestForm" class="subscriber-request-form" style="display:none;">
-                <div class="req-icon">💬</div>
-                <h3>Request Subscriber Access</h3>
-                <p>Send a message to the admin. Tell them why you'd like access.</p>
-                <div class="chat-box">
-                    <textarea id="subscriberRequestMessage" placeholder="Type your message here..." rows="3"></textarea>
-                    <button class="btn-request" id="subscriberRequestBtn"><i class="fas fa-paper-plane"></i> Send Request</button>
-                    <div id="subscriberRequestStatus" class="request-status-msg"></div>
-                </div>
-            </div>
-
-            <!-- Subscriber Access Granted -->
-            <div id="subscriberAccessGranted" class="subscriber-status-msg" style="display:none;">
-                <div class="icon">✅</div>
-                <div class="msg-title">You have subscriber access!</div>
-                <div class="msg-desc">Welcome to the club – you can now post and view all subscriber content.</div>
-            </div>
-
-            <!-- Pending request -->
-            <div id="subscriberRequestPending" class="subscriber-status-msg" style="display:none;">
-                <div class="icon">⏳</div>
-                <div class="msg-title">Request pending</div>
-                <div class="msg-desc">Your request is being reviewed by the admin.</div>
-                <div id="pendingAdminReply" class="admin-reply-box" style="display:none;">
-                    <strong>Admin reply:</strong> <span id="pendingReplyText"></span>
-                </div>
-            </div>
-
-            <div class="create-post" data-category="subscribers" id="subscribersCreatePost" style="display:none;">
-                <div class="form-row">
-                    <input type="text" id="subscribersTitleInput" placeholder="Post title..." style="flex:1.5;" />
-                    <input type="text" id="subscribersUsernameInput" placeholder="Username (optional)" style="flex:1;" />
-                </div>
-                <textarea id="subscribersPostInput" placeholder="What's on your mind? Use #hashtags ✨" rows="2"></textarea>
-                <div class="upload-row" id="subscribersUploadRow">
-                    <div class="file-upload">
-                        <input type="file" id="subscribersMediaFileInput" accept="image/*" />
-                        <label for="subscribersMediaFileInput" class="file-label">
-                            <i class="fas fa-upload"></i> <span id="subscribersFileLabelText">Choose Image</span>
-                        </label>
-                        <img id="subscribersImagePreview" class="image-preview" alt="Preview" />
-                    </div>
-                    <label class="blur-check">
-                        <input type="checkbox" id="subscribersBlurToggle" />
-                        <i class="fas fa-eye-slash"></i> Blur
+<span class="upload-hint" id="membersUploadHint"></span>
+</div>
+<div class="form-actions">
+<div class="left">
+<span style="font-size:0.8rem;color:#475569;"><i class="fas fa-lock"></i> anon</span>
+</div>
+<button id="membersPublishBtn"><i class="fas fa-paper-plane"></i> Publish</button>
+</div>
+</div>
+<div id="membersLoginPrompt" style="display:block; text-align:center; padding:2rem; background:rgba(255,255,255,0.03); border-radius:16px; border:1px solid rgba(255,255,255,0.04);">
+<p style="color:#94a3b8;"><i class="fas fa-lock" style="color:#a78bfa; font-size:2rem; display:block; margin-bottom:0.5rem;"></i> Please <a onclick="openLoginModal()" style="color:#a78bfa; cursor:pointer;">log in</a> to view and post in the Members Only section.</p>
+</div>
+<div class="feed-list" id="feedMembers"></div>
+</div><div class="panel" id="panel-subscribers">
+<div style="background:rgba(255,255,255,0.03); border-radius:16px; padding:1rem; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.04);">
+<p style="font-size:0.9rem; color:#94a3b8;"><i class="fas fa-star" style="color:#fbbf24;"></i> This section is for <strong>approved subscribers</strong>. Request access below.</p>
+</div>
+<!-- Subscriber Request Form -->
+<div class="subscriber-request-form" id="subscriberRequestForm" style="display:none;">
+<div class="req-icon">💬</div>
+<h3>Request Subscriber Access</h3>
+<p>Send a message to the admin. Tell them why you'd like access.</p>
+<div class="chat-box">
+<textarea id="subscriberRequestMessage" placeholder="Type your message here..." rows="3"></textarea>
+<button class="btn-request" id="subscriberRequestBtn"><i class="fas fa-paper-plane"></i> Send Request</button>
+<div class="request-status-msg" id="subscriberRequestStatus"></div>
+</div>
+</div>
+<!-- Subscriber Access Granted -->
+<div class="subscriber-status-msg" id="subscriberAccessGranted" style="display:none;">
+<div class="icon">✅</div>
+<div class="msg-title">You have subscriber access!</div>
+<div class="msg-desc">Welcome to the club – you can now post and view all subscriber content.</div>
+</div>
+<!-- Pending request -->
+<div class="subscriber-status-msg" id="subscriberRequestPending" style="display:none;">
+<div class="icon">⏳</div>
+<div class="msg-title">Request pending</div>
+<div class="msg-desc">Your request is being reviewed by the admin.</div>
+<div class="admin-reply-box" id="pendingAdminReply" style="display:none;">
+<strong>Admin reply:</strong> <span id="pendingReplyText"></span>
+</div>
+</div>
+<div class="create-post" data-category="subscribers" id="subscribersCreatePost" style="display:none;">
+<div class="form-row">
+<input id="subscribersTitleInput" placeholder="Post title..." style="flex:1.5;" type="text"/>
+<input id="subscribersUsernameInput" placeholder="Username (optional)" style="flex:1;" type="text"/>
+</div>
+<textarea id="subscribersPostInput" placeholder="What's on your mind? Use #hashtags ✨" rows="2"></textarea>
+<div class="upload-row" id="subscribersUploadRow">
+<div class="file-upload">
+<input accept="image/*" id="subscribersMediaFileInput" type="file"/>
+<label class="file-label" for="subscribersMediaFileInput">
+<i class="fas fa-upload"></i> <span id="subscribersFileLabelText">Choose Image</span>
+</label>
+<img alt="Preview" class="image-preview" decoding="async" id="subscribersImagePreview"/>
+</div>
+<label class="blur-check">
+<input id="subscribersBlurToggle" type="checkbox"/>
+<i class="fas fa-eye-slash"></i> Blur
                     </label>
-                    <span class="upload-hint" id="subscribersUploadHint"></span>
-                </div>
-                <div class="form-actions">
-                    <div class="left">
-                        <span style="font-size:0.8rem;color:#fbbf24;"><i class="fas fa-star"></i> subscriber</span>
-                    </div>
-                    <button id="subscribersPublishBtn"><i class="fas fa-paper-plane"></i> Publish</button>
-                </div>
-            </div>
-            <div id="subscribersLoginPrompt" style="display:block; text-align:center; padding:2rem; background:rgba(255,255,255,0.03); border-radius:16px; border:1px solid rgba(255,255,255,0.04);">
-                <p style="color:#94a3b8;"><i class="fas fa-star" style="color:#fbbf24; font-size:2rem; display:block; margin-bottom:0.5rem;"></i> Please <a style="color:#a78bfa; cursor:pointer;" onclick="openLoginModal()">log in</a> to request subscriber access.</p>
-            </div>
-            <div class="feed-list" id="feedSubscribers"></div>
-        </div>
-
-        <!-- ===== PANEL: ADMIN INBOX ===== -->
-        <div class="panel" id="panel-admin">
-            <div class="admin-inbox-container">
-                <h2>
-                    <i class="fas fa-inbox"></i> Subscriber Requests
+<span class="upload-hint" id="subscribersUploadHint"></span>
+</div>
+<div class="form-actions">
+<div class="left">
+<span style="font-size:0.8rem;color:#fbbf24;"><i class="fas fa-star"></i> subscriber</span>
+</div>
+<button id="subscribersPublishBtn"><i class="fas fa-paper-plane"></i> Publish</button>
+</div>
+</div>
+<div id="subscribersLoginPrompt" style="display:block; text-align:center; padding:2rem; background:rgba(255,255,255,0.03); border-radius:16px; border:1px solid rgba(255,255,255,0.04);">
+<p style="color:#94a3b8;"><i class="fas fa-star" style="color:#fbbf24; font-size:2rem; display:block; margin-bottom:0.5rem;"></i> Please <a onclick="openLoginModal()" style="color:#a78bfa; cursor:pointer;">log in</a> to request subscriber access.</p>
+</div>
+<div class="feed-list" id="feedSubscribers"></div>
+</div><div class="panel" id="panel-admin">
+<div class="admin-inbox-container">
+<h2>
+<i class="fas fa-inbox"></i> Subscriber Requests
                     <span class="badge-count" id="pendingCount">0</span>
-                </h2>
-                <div id="adminRequestList">
-                    <div class="empty-state" style="padding:1rem;">
-                        <i class="fas fa-check-circle" style="font-size:1.5rem;"></i>
-                        <p style="font-size:0.9rem;">No pending requests. All clear!</p>
-                    </div>
-                </div>
-                <div class="subscriber-access-list">
-                    <h3><i class="fas fa-users"></i> Approved Subscribers</h3>
-                    <div id="approvedSubscribersList">
-                        <span style="color:#64748b; font-size:0.85rem;">No subscribers yet.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== PANEL: PATREON+ ===== -->
-        <div class="panel" id="panel-patreon">
-            <div class="patreon-wrapper">
-                <div class="patreon-hearts" id="patreonHeartsContainer"></div>
-                <div class="patreon-brand">
-                    <h1><span class="sparkle">✨</span>Patreon<span style="color:#ffd1e7;">+</span><span class="sparkle" style="animation-delay:0.6s;">🌸</span></h1>
-                    <div class="subtitle">♡ Viral Dancando Trends · Absolute Freedom ♡</div>
-                </div>
-                <nav class="patreon-nav" id="patreonNav">
-                    <button class="active" data-ptab="ptab1">🏠 Home</button>
-                    <button data-ptab="ptab2">👑 Tiers</button>
-                    <button data-ptab="ptab3">🔓 The Vault</button>
-                    <button data-ptab="ptab4">📰 Posts</button>
-                    <button data-ptab="ptab5">⚡ Tech</button>
-                </nav>
-                <!-- Patreon sections (full content) -->
-                <div class="patreon-section active" id="ptab1">
-                    <div style="display:flex; justify-content:center; margin-bottom:1rem;">
-                        <div style="max-width:300px; width:90%; border-radius:42px; background:rgba(255,255,255,0.5); padding:4px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_vd5YKOLulUIe0dE4rEJmTvWx1s_UJrrotdx1Ddh6_S1V51nKxoIysRPoyHAUsNx5YTUdMd7W9eCKYgo2AZioba2x0OWjysp-F3MxjoZAUT5PMYZqt9kuAttFz2WG8aCOiZ_zL1z7P6fkE9JC0WmvWwqESdxYIhFMxex8rUBNoeeDQhXsFeDqqS7kJ4/s320/Screenshot%202024-05-21%20at%2001-16-40%20(%40brandarmygirls)%20%E2%80%A2%20Instagram%20photos%20and%20videos.png" alt="Dance girls" style="width:100%; border-radius:38px; display:block;" />
-                        </div>
-                    </div>
-                    <div style="background:rgba(255,255,255,0.85); backdrop-filter:blur(4px); border-radius:28px; padding:1.2rem; text-align:center; margin-bottom:1rem; border:1px solid #ffe2ed;">
-                        <h1 style="font-size:1.8rem; font-weight:800; color:#c43b6b;">💖 VIRAL DANCANDO FUNK 💖 <span style="background:#ff2a6d; color:white; border-radius:60px; padding:2px 14px; font-size:0.7rem; display:inline-block;">#1 TREND 2026</span></h1>
-                        <p style="font-size:1.1rem; font-weight:500;">✨ The cutest Brazilian dance wave ✨</p>
-                        <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:0.5rem;">
-                            <a href="https://whop.com/joined/viraldancandotrends/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#ff2a6d; color:white; font-weight:700; padding:8px 20px; border-radius:50px; text-decoration:none; box-shadow:0 4px 12px rgba(255,42,109,0.3);">🌸 Join Patreon+ 🌸</a>
-                        </div>
-                    </div>
-                    <div style="background:rgba(255,238,243,0.95); backdrop-filter:blur(4px); border-radius:50px; padding:1rem; text-align:center; color:#421e2c; margin-bottom:1rem;">
-                        💌 Join my private blog 💌<br />
-                        <span style="font-size:0.9rem;">Add your email for cute dance tutorials:</span><br />
-                        <a href="https://link.me/dancaplanet" target="_blank" style="background:#ff2a6d; display:inline-block; margin-top:6px; padding:6px 20px; border-radius:40px; color:white; text-decoration:none;">📧 https://link.me/dancaplanet</a>
-                    </div>
-                    <div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
-                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">🩰 What Is Dancando Funk?</h3>
-                        <p style="color:#421e2c;"><strong>Dancando funk</strong> is the girly &amp; bold dance side of Brazilian funk. Born in Rio's favelas, it's all about shaking your hips, sassy shimmies, and attitude. Playful, flirty, and made for TikTok! "Dancando" means "dancing" in Portuguese — it's all about moving with joy! 💃🏽💕</p>
-                        <div style="display:flex; justify-content:center; margin-top:14px; width:100%;">
-                            <div style="background:#ffeef2; border-radius:36px; overflow:hidden; border:2px solid #ffbfd0; width:100%; max-width:600px;">
-                                <video autoplay muted loop playsinline style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
-                                    <source src="https://va.media.tumblr.com/tumblr_tejedpTfdG1se0s84.mp4" type="video/mp4" />
-                                </video>
-                                <div style="padding:0.6rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.85rem;">Feel the beat, shake the hips — bigger &amp; bolder!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
-                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">📱 Why It's Viral in 2026 💫</h3>
-                        <ul style="list-style:none; padding-left:0; color:#421e2c;">
-                            <li style="margin-bottom:0.5rem; padding-left:1.6rem; position:relative;">🌸 <strong>TikTok's Algorithm loves it</strong> — Challenges like “PASSO BEM SOLTO” get millions of views.</li>
-                            <li style="margin-bottom:0.5rem; padding-left:1.6rem; position:relative;">🌸 <strong>Global Crossover</strong> — Dancando Funk blends with pop, reggaeton, even K-pop!</li>
-                            <li style="margin-bottom:0.5rem; padding-left:1.6rem; position:relative;">🌸 <strong>Low barrier, high energy</strong> — Just groove, bounce and have fun 🎀</li>
-                        </ul>
-                        <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:0.8rem;">
-                            <div style="background:#ffeef2; border-radius:28px; overflow:hidden; border:2px solid #ffbfd0; width:180px; flex:1 1 150px;">
-                                <img src="https://i.ibb.co/TBdPWCsP/patreon-plus-v2-4-payment-stripe-paypal.png" alt="Patreon Plus payment" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;" />
-                                <div style="padding:0.4rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.7rem;">✨ Easy payments</div>
-                            </div>
-                            <div style="background:#ffeef2; border-radius:28px; overflow:hidden; border:2px solid #ffbfd0; width:180px; flex:1 1 150px;">
-                                <img src="https://i.ibb.co/bSFYM26/patreon-plus-v2-5-message-on-keet.png" alt="Patreon Plus message" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;" />
-                                <div style="padding:0.4rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.7rem;">💬 Connect on Keet</div>
-                            </div>
-                            <div style="background:#ffeef2; border-radius:28px; overflow:hidden; border:2px solid #ffbfd0; width:180px; flex:1 1 150px;">
-                                <img src="https://i.ibb.co/FqLZtPF5/patreon-plus-v2-6-access-celebration.png" alt="Patreon Plus celebration" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;" />
-                                <div style="padding:0.4rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.7rem;">🎉 VIP access</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
-                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">🔥 Top Viral Funk Challenges</h3>
-                        <ul style="list-style:none; padding-left:0; color:#421e2c;">
-                            <li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">💃 <strong>PASSO BEM SOLTO</strong> — Loose, freeflowing steps.</li>
-                            <li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🍑 <strong>TREME O POPOSÃO</strong> — Hip-shaking madness every girl is doing!</li>
-                            <li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">✨ <strong>MARTILLANDO</strong> — Sharp rhythmical moves.</li>
-                        </ul>
-                        <div style="margin-top:10px;">
-                            <a href="https://www.tiktok.com/discover/funk-dancing" target="_blank" style="background:#fff0f4; color:#c2476e; padding:4px 18px; border-radius:40px; text-decoration:none; font-weight:600; border:1px solid #ffbbd0; display:inline-block;">🔍 Explore on TikTok →</a>
-                        </div>
-                    </div>
-                    <div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
-                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">👯‍♀️ How to Join the Trend</h3>
-                        <ul style="list-style:none; padding-left:0; color:#421e2c;">
-                            <li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🎶 <strong>Find the Beat</strong> — Search #dancandofunk on TikTok.</li>
-                            <li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">💗 <strong>Master the Basics</strong> — Hip shimmies + relaxed bounce.</li>
-                            <li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🌟 <strong>Add Your Girly Twist</strong> — Heart hands, hair flips, pink accessories.</li>
-                            <li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🏷️ <strong>Hashtags</strong> — #dancandofunk #brazilianfunk #girlyvibes #2026</li>
-                        </ul>
-                        <div style="background:rgba(255,255,255,0.6); border-radius:16px; padding:0.6rem; margin-top:0.5rem; color:#421e2c;">💡 Pro tip: wear pink, add glitter, feel the rhythm!</div>
-                    </div>
-                    <div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9); text-align:center;">
-                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60; text-align:left;">🌎 Cultural Impact (Girl Power)</h3>
-                        <p style="color:#421e2c;">Dancando Funk empowers girls worldwide to express themselves with confidence. From Rio to Seoul, dancers embrace body positivity and joyful movement.</p>
-                        <div style="display:flex; justify-content:center; margin:0.8rem 0;">
-                            <img src="https://i.ibb.co/0y4drF6m/qr-code.png" alt="QR code" style="max-width:180px; border-radius:24px; box-shadow:0 4px 12px rgba(0,0,0,0.1);" />
-                        </div>
-                        <div style="font-size:0.8rem; color:#c4436b;">✨ Scan to unlock exclusive funk content ✨</div>
-                    </div>
-                    <div style="background:#ffeef2; border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
-                        <h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">💖 Final Take: Own the Floor 💖</h3>
-                        <p style="color:#421e2c; font-size:1rem;">Dancando funk is a vibe — sweaty, joyful, bold, and girly. Put on your pink fit, press record, and let the funk take over! ✨</p>
-                        <div style="text-align:center; margin-top:12px;"><span style="background:#ff8fad30; padding:6px 16px; border-radius:100px; color:#421e2c;">🌸 #DancandoFunk2026 🌸</span></div>
-                    </div>
-                    <div style="background:rgba(255,238,243,0.95); backdrop-filter:blur(4px); border-radius:50px; padding:1rem; text-align:center; color:#421e2c; margin-bottom:1rem;">
-                        💕 <strong>Don't miss exclusive funk content</strong> 💕<br />
-                        <a href="https://buy.stripe.com/28EeVd4O216l9HzaVJenS00" target="_blank" style="display:inline-block; background:linear-gradient(105deg,#8e2de2,#4a00e0); padding:6px 24px; border-radius:60px; color:white; font-weight:800; text-decoration:none; font-size:1.1rem; box-shadow:0 0 12px rgba(128,0,255,0.6); margin:4px 0;">✨ Stripe</a><br />
-                        <a href="https://stt.gg/YKrS2r8C" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg,#b44cff,#ff4d6d); padding:6px 18px; border-radius:60px; color:white; font-weight:700; text-decoration:none; font-size:0.9rem; box-shadow:0 4px 14px rgba(180,76,255,0.5); margin:4px 0;">💬 24/7 Sales Support</a><br />
-                        <span style="font-size:0.8rem;">✨ Instant access to tutorials, choreos &amp; more ✨</span><br />
-                        <a href="https://link.me/dancaplanet" target="_blank" style="background:#ff2a6d; display:inline-block; margin-top:6px; padding:4px 18px; border-radius:40px; color:white; text-decoration:none; font-size:0.8rem;">📬 Add your email (free)</a>
-                    </div>
-                    <div style="text-align:center; margin:0.5rem 0 1rem;">
-                        <button onclick="window.open('https://buymeacoffee.com/viraldancandotrends','_blank')" style="background:transparent; border:none; font-size:80px; cursor:pointer; animation:wobblePizza 0.6s infinite ease-in-out; filter:drop-shadow(0 0 15px rgba(255,100,0,0.8)); padding:10px; position:relative;">
-                            <span style="display:inline-block; animation:floatPizza 1.2s infinite alternate;">🍕</span>
-                            <span style="position:absolute; top:-10px; left:-10px; font-size:30px; animation:sparklePizza 1.5s infinite;">✨</span>
-                            <span style="position:absolute; bottom:-10px; right:-10px; font-size:30px; animation:sparklePizza 1.5s infinite 0.7s;">✨</span>
-                        </button>
-                    </div>
-                    <div style="background:rgba(255,250,245,0.96); backdrop-filter:blur(4px); border-radius:56px; padding:1.2rem 1rem; margin-bottom:1rem; box-shadow:0 20px 35px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,215,0,0.5); text-align:center;">
-                        <div style="display:inline-flex; align-items:center; gap:6px; background:linear-gradient(115deg,#ffbe3c,#ff9f1c); color:#1e2f3a; font-weight:800; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; padding:4px 14px; border-radius:80px; margin-bottom:10px;">⭐ PREMIUM ACCESS ⭐</div>
-                        <h3 style="font-size:1.3rem; font-weight:800; background:linear-gradient(135deg,#1f4e6e,#0e2f42); background-clip:text; -webkit-background-clip:text; color:transparent;">Unlock VIP Funk Content</h3>
-                        <p style="color:#5d3a2e; font-weight:500; font-size:0.9rem;">Subscribe with PayPal &amp; get ad‑free tutorials, exclusive choreos &amp; early releases</p>
-                        <div id="paypal-button-container-P-4CH66365SP314171VNIPAMFQ" style="max-width:360px; margin:0 auto; border-radius:60px; overflow:hidden; box-shadow:0 8px 18px rgba(0,0,0,0.12);"></div>
-                        <div style="display:flex; justify-content:center; align-items:center; gap:6px; font-size:0.65rem; color:#7a5a4a; margin-top:14px; font-weight:500;">🔒 Cancel anytime · Secure instant payment</div>
-                    </div>
-                    <div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(3px); border-radius:32px; padding:1.2rem; border:1px solid rgba(255,207,223,0.9); margin-bottom:1rem;">
-                        <h3 style="font-size:1.2rem; font-weight:700; text-align:center; color:#aa3e60; margin-bottom:0.5rem;">📸 Image Carousel</h3>
-                        <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; margin-bottom:0.8rem;">
-                            <a href="http://www.patreon.rf.gd/" target="_blank" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">👑 Patreon+</a>
-                            <a href="https://buy.stripe.com/28EeVd4O216l9HzaVJenS00" target="_blank" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">💎 Stripe</a>
-                            <a href="https://www.blogger.com/followers/follow/3490337234484184582?hl=en" target="_blank" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">➕ Follow</a>
-                            <a href="https://link.me/dancaplanet/shop" target="_blank" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">🛒 Shop</a>
-                        </div>
-                        <div style="position:relative; background:#1a0f1a; border-radius:24px; overflow:hidden; margin-bottom:0.5rem;">
-                            <div id="patreonCarouselContainer" style="display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:thin; scrollbar-color:#ff77aa #2a1a2a;"></div>
-                            <button id="patreonCarouselPrev" style="position:absolute; top:50%; left:8px; transform:translateY(-50%); background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); border:none; width:32px; height:32px; border-radius:50%; color:white; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
-                            <button id="patreonCarouselNext" style="position:absolute; top:50%; right:8px; transform:translateY(-50%); background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); border:none; width:32px; height:32px; border-radius:50%; color:white; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
-                        </div>
-                        <div style="text-align:center; font-size:0.7rem; color:#ac7f92;" id="patreonCarouselCounter"></div>
-                    </div>
-                    <footer style="text-align:center; color:#fff5f9; font-weight:300; font-size:0.8rem; opacity:0.8; padding-top:0.5rem;">
-                        ♡ Patreon+ · Viral Dancando Trends · 2026 · Built with pink &amp; freedom ♡
-                    </footer>
-                </div>
-                <div class="patreon-section" id="ptab2">
-                    <div class="patreon-post-card">
-                        <div class="post-title">🔑 Choose Your Level of Access <span class="badge">MEMBERSHIP</span></div>
-                        <p>Join the <strong>Viral Dancando Trends</strong> community and unlock the full spectrum of our digital empire.</p>
-                    </div>
-                    <div class="patreon-grid">
-                        <div class="patreon-card"><span class="emoji-big">🖥️</span><h3>Tier 1 · The Observer</h3><p><strong>$5/mo</strong> — SFW Access. Privacy engineering, AI Beauty Pageant results, public Potato Chat channel.</p><a href="#" class="btn-pink">Subscribe</a></div>
-                        <div class="patreon-card"><span class="emoji-big">🎭</span><h3>Tier 2 · The Analyst</h3><p><strong>$15/mo</strong> — Assorted Content. Wellness reports, figure studies, <strong>"The Bond"</strong> series, private Potato Chat group.</p><a href="#" class="btn-pink">Subscribe</a></div>
-                        <div class="patreon-card vault"><span class="emoji-big">🕵️</span><h3>Tier 3 · The Insider</h3><p><strong>$25+/mo</strong> — The master key to <strong>The Vault</strong>. Mute &amp; Loop, Sweet Chocolate gallery, uncensored archives.</p><a href="#" class="btn-pink">Join Insider</a></div>
-                    </div>
-                    <div class="patreon-post-card" style="margin-top:1.2rem;">
-                        <div class="post-title">🤖 Instant Gratification</div>
-                        <p><strong>FedPromptly</strong> automation: subscribe → bot verifies → instant entry to private groups on Potato Chat or Telegram. No DMs, no waiting.</p>
-                        <div class="tags"><span>#automation</span><span>#instantaccess</span><span>#potatochat</span></div>
-                    </div>
-                </div>
-                <div class="patreon-section" id="ptab3">
-                    <div class="patreon-post-card" style="border-color:#ff80aa; background:rgba(255,20,80,0.15);">
-                        <div class="post-title">💎 The Vault · Uncut &amp; Uncensored <span class="badge" style="background:#ff1a6a;">18+</span></div>
-                        <p>Some things are meant to be discovered, not deleted. <strong>Patreon+</strong> is the unfiltered reality you've been looking for.</p>
-                        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.6rem 0;">
-                            <span style="background:rgba(255,255,255,0.15);padding:0.2rem 1rem;border-radius:50px;">🎬 Mute &amp; Loop</span>
-                            <span style="background:rgba(255,255,255,0.15);padding:0.2rem 1rem;border-radius:50px;">🍫 Sweet Chocolate</span>
-                            <span style="background:rgba(255,255,255,0.15);padding:0.2rem 1rem;border-radius:50px;">🤖 AI Art (Unrestricted)</span>
-                        </div>
-                        <a href="#" class="btn-pink" style="background:#ff1a6a;color:#fff;">🔓 Unlock the Archive</a>
-                    </div>
-                    <div class="patreon-grid">
-                        <div class="patreon-card vault"><span class="emoji-big">🎬</span><h3>Mute &amp; Loop S2</h3><p>Visual-focused storytelling. Exclusive for Potato Chat Fan Club. Search <strong>#ChildExpert</strong> or <strong>#Danceexpert</strong>.</p><span class="price-tag">$2.99/mo</span><br /><a href="#" class="btn-pink">Watch →</a></div>
-                        <div class="patreon-card vault"><span class="emoji-big">🍫</span><h3>Sweet Chocolate</h3><p>Exotic beauty gallery — a curated collection of artistic and uncensored visual stories.</p><a href="#" class="btn-pink">Explore →</a></div>
-                    </div>
-                </div>
-                <div class="patreon-section" id="ptab4">
-                    <div class="patreon-post-card">
-                        <div class="post-title">🔒 Some Things Are Meant to Be Discovered <span class="badge">VIRAL</span></div>
-                        <div class="meta">📱 Twitter / Social · #meninadancandofunk #funkdanca #dancafunk</div>
-                        <p>They build walls; we build bridges. <strong>Patreon+</strong> is the uncensored reality you've been looking for.</p>
-                        <div class="tags"><span>#funkbrasil</span><span>#viral</span><span>#danca</span><span>#meninadancandofunk</span></div>
-                    </div>
-                    <div class="patreon-post-card">
-                        <div class="post-title">🎬 Mute &amp; Loop: Season 2 is Airing! <span class="badge">NEW</span></div>
-                        <div class="meta">📺 Potato Chat Fan Club Exclusive</div>
-                        <p>The series that speaks for itself. Visual-focused storytelling with SFW and family-friendly options.</p>
-                        <div class="tags"><span>#muteandloop</span><span>#potatochat</span><span>#danceexpert</span></div>
-                    </div>
-                    <div class="patreon-post-card">
-                        <div class="post-title">🤖 Instant Access · No Manual Invites <span class="badge">AUTOMATION</span></div>
-                        <div class="meta">⚡ Powered by FedPromptly</div>
-                        <p>Subscribe or donate → bot verifies → instant entry. <strong>I do not answer DMs about access.</strong> The bot is your 24/7 concierge.</p>
-                        <a href="#" class="btn-pink">Get Your Key →</a>
-                    </div>
-                </div>
-                <div class="patreon-section" id="ptab5">
-                    <div class="patreon-post-card">
-                        <div class="post-title">🏰 Building a Ban-Proof Empire <span class="badge">ANCHOR</span></div>
-                        <p><strong>Sovereign Digital Infrastructure</strong> — learn the secrets of privacy engineering, self-hosting, ethical corporate bypassing, and decentralized communities on Keet and Matrix.</p>
-                        <p style="margin-top:0.4rem;">Our <strong>"Anchor"</strong> content provides a 100% compliant foundation while teaching you how to own your digital identity.</p>
-                        <div class="tags"><span>#privacy</span><span>#sovereignty</span><span>#decentralized</span><span>#keet</span></div>
-                    </div>
-                    <div class="patreon-grid">
-                        <div class="patreon-card"><span class="emoji-big">🔐</span><h3>Privacy Engineering</h3><p>Self-hosting, encryption, and ethical bypassing techniques for true digital freedom.</p><a href="#" class="btn-pink">Learn →</a></div>
-                        <div class="patreon-card"><span class="emoji-big">🌐</span><h3>Decentralized Communities</h3><p>Keet, Matrix, and Potato Chat — build your own ban-proof network.</p><a href="#" class="btn-pink">Explore →</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== LOAD MORE ===== -->
-        <div class="load-more-container" id="loadMoreContainer">
-            <button id="loadMoreBtn" class="load-more-btn" style="display:none;">Load More</button>
-            <div id="loadingMore" class="loading-more"><i class="fas fa-spinner fa-spin"></i> Loading more...</div>
-        </div>
-
-        <!-- ================================================================
-        PAYPAL CHECKOUT — BOTTOM OF THE PAGE
-        ================================================================ -->
-        <div class="paypal-checkout-section" id="paypalCheckoutSection">
-            <div class="checkout-header">
-                <div class="icon-wrap">
-                    <i class="fab fa-paypal"></i>
-                </div>
-                <h2>💖 Subscribe &amp; Unlock Premium</h2>
-                <span class="price-badge">$19.99 USD</span>
-            </div>
-            <div class="checkout-body">
-                <div class="info-col">
-                    <div class="feature"><i class="fas fa-check-circle"></i> One‑time payment</div>
-                    <div class="feature"><i class="fas fa-check-circle"></i> Instant subscriber access</div>
-                    <div class="feature"><i class="fas fa-check-circle"></i> Exclusive content &amp; perks</div>
-                    <div class="feature"><i class="fas fa-check-circle"></i> Cancel anytime</div>
-                    <div style="margin-top:0.8rem; font-size:0.8rem; color:#64748b;">
-                        <i class="fas fa-lock" style="color:#34d399;"></i> Secure checkout via PayPal
-                    </div>
-                </div>
-                <div class="paypal-col">
-                    <div id="paypalButtonContainer">
-                        <!-- PayPal button will be rendered here -->
-                        <div class="paypal-status-msg" id="paypalStatusMsg">
-                            <i class="fas fa-spinner fa-spin"></i> Loading checkout...
-                        </div>
-                    </div>
-                    <div class="paypal-status">
-                        <span class="dot online" id="paypalStatusDot"></span>
-                        <span id="paypalStatusText">Ready</span>
-                    </div>
-                    <div id="subscriberBadgeContainer" style="margin-top:0.2rem;"></div>
-                </div>
-            </div>
-        </div>
-
-    </div><!-- end .app-container -->
-
-    <!-- ================================================================
+</h2>
+<div id="adminRequestList">
+<div class="empty-state" style="padding:1rem;">
+<i class="fas fa-check-circle" style="font-size:1.5rem;"></i>
+<p style="font-size:0.9rem;">No pending requests. All clear!</p>
+</div>
+</div>
+<div class="subscriber-access-list">
+<h3><i class="fas fa-users"></i> Approved Subscribers</h3>
+<div id="approvedSubscribersList">
+<span style="color:#64748b; font-size:0.85rem;">No subscribers yet.</span>
+</div>
+</div>
+</div>
+</div><div class="panel" id="panel-patreon">
+<div class="patreon-wrapper">
+<div class="patreon-hearts" id="patreonHeartsContainer"></div>
+<div class="patreon-brand">
+<h1><span class="sparkle">✨</span>Patreon<span style="color:#ffd1e7;">+</span><span class="sparkle" style="animation-delay:0.6s;">🌸</span></h1>
+<div class="subtitle">♡ Viral Dancando Trends · Absolute Freedom ♡</div>
+</div>
+<nav class="patreon-nav" id="patreonNav">
+<button class="active" data-ptab="ptab1">🏠 Home</button>
+<button data-ptab="ptab2">👑 Tiers</button>
+<button data-ptab="ptab3">🔓 The Vault</button>
+<button data-ptab="ptab4">📰 Posts</button>
+<button data-ptab="ptab5">⚡ Tech</button>
+</nav>
+<!-- Patreon sections (full content) -->
+<div class="patreon-section active" id="ptab1">
+<div style="display:flex; justify-content:center; margin-bottom:1rem;">
+<div style="max-width:300px; width:90%; border-radius:42px; background:rgba(255,255,255,0.5); padding:4px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+<img alt="Dance girls" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_vd5YKOLulUIe0dE4rEJmTvWx1s_UJrrotdx1Ddh6_S1V51nKxoIysRPoyHAUsNx5YTUdMd7W9eCKYgo2AZioba2x0OWjysp-F3MxjoZAUT5PMYZqt9kuAttFz2WG8aCOiZ_zL1z7P6fkE9JC0WmvWwqESdxYIhFMxex8rUBNoeeDQhXsFeDqqS7kJ4/s320/Screenshot%202024-05-21%20at%2001-16-40%20(%40brandarmygirls)%20%E2%80%A2%20Instagram%20photos%20and%20videos.png" decoding="async" loading="lazy" style="width:100%; border-radius:38px; display:block;"/>
+</div>
+</div>
+<div style="background:rgba(255,255,255,0.85); backdrop-filter:blur(4px); border-radius:28px; padding:1.2rem; text-align:center; margin-bottom:1rem; border:1px solid #ffe2ed;">
+<h1 style="font-size:1.8rem; font-weight:800; color:#c43b6b;">💖 VIRAL DANCANDO FUNK 💖 <span style="background:#ff2a6d; color:white; border-radius:60px; padding:2px 14px; font-size:0.7rem; display:inline-block;">#1 TREND 2026</span></h1>
+<p style="font-size:1.1rem; font-weight:500;">✨ The cutest Brazilian dance wave ✨</p>
+<div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:0.5rem;">
+<a class="server-join-cta" href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer" rel="noopener noreferrer">Support on Ko-fi ↗</a>
+</div>
+</div>
+<div style="background:rgba(255,238,243,0.95); backdrop-filter:blur(4px); border-radius:50px; padding:1rem; text-align:center; color:#421e2c; margin-bottom:1rem;">
+                        💌 Join my private blog 💌<br/>
+<span style="font-size:0.9rem;">Add your email for cute dance tutorials:</span><br/>
+<a href="https://link.me/dancaplanet" style="background:#ff2a6d; display:inline-block; margin-top:6px; padding:6px 20px; border-radius:40px; color:white; text-decoration:none;" target="_blank">📧 https://link.me/dancaplanet</a>
+</div>
+<div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
+<h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">🩰 What Is Dancando Funk?</h3>
+<p style="color:#421e2c;"><strong>Dancando funk</strong> is the girly &amp; bold dance side of Brazilian funk. Born in Rio's favelas, it's all about shaking your hips, sassy shimmies, and attitude. Playful, flirty, and made for TikTok! "Dancando" means "dancing" in Portuguese — it's all about moving with joy! 💃🏽💕</p>
+<div style="display:flex; justify-content:center; margin-top:14px; width:100%;">
+<div style="background:#ffeef2; border-radius:36px; overflow:hidden; border:2px solid #ffbfd0; width:100%; max-width:600px;">
+<video data-autoplay="true" loop="" muted="" playsinline="" preload="none" style="width:100%; aspect-ratio:16/9; object-fit:cover; display:block;">
+<source data-src="https://va.media.tumblr.com/tumblr_tejedpTfdG1se0s84.mp4" type="video/mp4"/>
+</video>
+<div style="padding:0.6rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.85rem;">Feel the beat, shake the hips — bigger &amp; bolder!</div>
+</div>
+</div>
+</div>
+<div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
+<h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">📱 Why It's Viral in 2026 💫</h3>
+<ul style="list-style:none; padding-left:0; color:#421e2c;">
+<li style="margin-bottom:0.5rem; padding-left:1.6rem; position:relative;">🌸 <strong>TikTok's Algorithm loves it</strong> — Challenges like “PASSO BEM SOLTO” get millions of views.</li>
+<li style="margin-bottom:0.5rem; padding-left:1.6rem; position:relative;">🌸 <strong>Global Crossover</strong> — Dancando Funk blends with pop, reggaeton, even K-pop!</li>
+<li style="margin-bottom:0.5rem; padding-left:1.6rem; position:relative;">🌸 <strong>Low barrier, high energy</strong> — Just groove, bounce and have fun 🎀</li>
+</ul>
+<div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:0.8rem;">
+<div style="background:#ffeef2; border-radius:28px; overflow:hidden; border:2px solid #ffbfd0; width:180px; flex:1 1 150px;">
+<button type="button" data-kofi-support="" aria-controls="widgetContainer" aria-label="Support on Ko-fi" style="width:100%; aspect-ratio:1/1; display:grid; place-items:center; border:0; background:#ffeef2; color:#b34e6b; font:700 1.2rem Inter,sans-serif; cursor:pointer;">♡ Ko-fi</button>
+<div style="padding:0.4rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.7rem;">✨ Easy payments</div>
+</div>
+<div style="background:#ffeef2; border-radius:28px; overflow:hidden; border:2px solid #ffbfd0; width:180px; flex:1 1 150px;">
+<img alt="Patreon Plus message" data-src="https://i.ibb.co/bSFYM26/patreon-plus-v2-5-message-on-keet.png" decoding="async" loading="lazy" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;"/>
+<div style="padding:0.4rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.7rem;">💬 Connect on Keet</div>
+</div>
+<div style="background:#ffeef2; border-radius:28px; overflow:hidden; border:2px solid #ffbfd0; width:180px; flex:1 1 150px;">
+<img alt="Patreon Plus celebration" data-src="https://i.ibb.co/FqLZtPF5/patreon-plus-v2-6-access-celebration.png" decoding="async" loading="lazy" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;"/>
+<div style="padding:0.4rem; text-align:center; font-weight:600; background:#fff2f5; color:#b34e6b; font-size:0.7rem;">🎉 VIP access</div>
+</div>
+</div>
+</div>
+<div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
+<h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">🔥 Top Viral Funk Challenges</h3>
+<ul style="list-style:none; padding-left:0; color:#421e2c;">
+<li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">💃 <strong>PASSO BEM SOLTO</strong> — Loose, freeflowing steps.</li>
+<li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🍑 <strong>TREME O POPOSÃO</strong> — Hip-shaking madness every girl is doing!</li>
+<li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">✨ <strong>MARTILLANDO</strong> — Sharp rhythmical moves.</li>
+</ul>
+<div style="margin-top:10px;">
+<a href="https://www.tiktok.com/discover/funk-dancing" style="background:#fff0f4; color:#c2476e; padding:4px 18px; border-radius:40px; text-decoration:none; font-weight:600; border:1px solid #ffbbd0; display:inline-block;" target="_blank">🔍 Explore on TikTok →</a>
+</div>
+</div>
+<div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
+<h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">👯‍♀️ How to Join the Trend</h3>
+<ul style="list-style:none; padding-left:0; color:#421e2c;">
+<li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🎶 <strong>Find the Beat</strong> — Search #dancandofunk on TikTok.</li>
+<li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">💗 <strong>Master the Basics</strong> — Hip shimmies + relaxed bounce.</li>
+<li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🌟 <strong>Add Your Girly Twist</strong> — Heart hands, hair flips, pink accessories.</li>
+<li style="margin-bottom:0.4rem; padding-left:1.6rem; position:relative;">🏷️ <strong>Hashtags</strong> — #dancandofunk #brazilianfunk #girlyvibes #2026</li>
+</ul>
+<div style="background:rgba(255,255,255,0.6); border-radius:16px; padding:0.6rem; margin-top:0.5rem; color:#421e2c;">💡 Pro tip: wear pink, add glitter, feel the rhythm!</div>
+</div>
+<div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(4px); border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9); text-align:center;">
+<h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60; text-align:left;">🌎 Cultural Impact (Girl Power)</h3>
+<p style="color:#421e2c;">Dancando Funk empowers girls worldwide to express themselves with confidence. From Rio to Seoul, dancers embrace body positivity and joyful movement.</p>
+<div style="display:flex; justify-content:center; margin:0.8rem 0;">
+<img alt="QR code" data-src="https://i.ibb.co/0y4drF6m/qr-code.png" decoding="async" loading="lazy" style="max-width:180px; border-radius:24px; box-shadow:0 4px 12px rgba(0,0,0,0.1);"/>
+</div>
+<div style="font-size:0.8rem; color:#c4436b;">✨ Scan to unlock exclusive funk content ✨</div>
+</div>
+<div style="background:#ffeef2; border-radius:32px; padding:1.2rem; margin-bottom:1rem; border:1px solid rgba(255,207,223,0.9);">
+<h3 style="font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; border-left:6px solid #ff4d7a; padding-left:0.8rem; color:#aa3e60;">💖 Final Take: Own the Floor 💖</h3>
+<p style="color:#421e2c; font-size:1rem;">Dancando funk is a vibe — sweaty, joyful, bold, and girly. Put on your pink fit, press record, and let the funk take over! ✨</p>
+<div style="text-align:center; margin-top:12px;"><span style="background:#ff8fad30; padding:6px 16px; border-radius:100px; color:#421e2c;">🌸 #DancandoFunk2026 🌸</span></div>
+</div>
+<div style="background:rgba(255,238,243,0.95); backdrop-filter:blur(4px); border-radius:50px; padding:1rem; text-align:center; color:#421e2c; margin-bottom:1rem;">
+                        💕 <strong>Don't miss exclusive funk content</strong> 💕<br/>
+<a href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer" style="display:inline-block; background:linear-gradient(105deg,#8e2de2,#4a00e0); padding:6px 24px; border-radius:60px; color:white; font-weight:800; text-decoration:none; font-size:1.1rem; box-shadow:0 0 12px rgba(128,0,255,0.6); margin:4px 0;">✨ Support on Ko-fi</a><br/>
+<a href="https://stt.gg/YKrS2r8C" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg,#b44cff,#ff4d6d); padding:6px 18px; border-radius:60px; color:white; font-weight:700; text-decoration:none; font-size:0.9rem; box-shadow:0 4px 14px rgba(180,76,255,0.5); margin:4px 0;" target="_blank">💬 24/7 Sales Support</a><br/>
+<span style="font-size:0.8rem;">✨ Instant access to tutorials, choreos &amp; more ✨</span><br/>
+<a href="https://link.me/dancaplanet" style="background:#ff2a6d; display:inline-block; margin-top:6px; padding:4px 18px; border-radius:40px; color:white; text-decoration:none; font-size:0.8rem;" target="_blank">📬 Add your email (free)</a>
+</div>
+<div style="text-align:center; margin:0.5rem 0 1rem;">
+<button type="button" data-kofi-support="" aria-controls="widgetContainer" aria-label="Support on Ko-fi" style="background:transparent; border:none; font-size:80px; cursor:pointer; animation:wobblePizza 0.6s infinite ease-in-out; filter:drop-shadow(0 0 15px rgba(255,100,0,0.8)); padding:10px; position:relative;">
+<span style="display:inline-block; animation:floatPizza 1.2s infinite alternate;">🍕</span>
+<span style="position:absolute; top:-10px; left:-10px; font-size:30px; animation:sparklePizza 1.5s infinite;">✨</span>
+<span style="position:absolute; bottom:-10px; right:-10px; font-size:30px; animation:sparklePizza 1.5s infinite 0.7s;">✨</span>
+</button>
+</div>
+<div style="background:rgba(255,250,245,0.96); backdrop-filter:blur(4px); border-radius:56px; padding:1.2rem 1rem; margin-bottom:1rem; box-shadow:0 20px 35px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,215,0,0.5); text-align:center;">
+<div style="display:inline-flex; align-items:center; gap:6px; background:linear-gradient(115deg,#ffbe3c,#ff9f1c); color:#1e2f3a; font-weight:800; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; padding:4px 14px; border-radius:80px; margin-bottom:10px;">⭐ PREMIUM ACCESS ⭐</div>
+<h3 style="font-size:1.3rem; font-weight:800; background:linear-gradient(135deg,#1f4e6e,#0e2f42); background-clip:text; -webkit-background-clip:text; color:transparent;">Unlock VIP Funk Content</h3>
+<p style="color:#5d3a2e; font-weight:500; font-size:0.9rem;">Support us on Ko-fi and explore available membership options.</p>
+<button class="btn-pink" type="button" data-kofi-support="" aria-controls="widgetContainer">Support on Ko-fi</button>
+<div style="display:flex; justify-content:center; align-items:center; gap:6px; font-size:0.65rem; color:#7a5a4a; margin-top:14px; font-weight:500;">🔒 Checkout handled securely by Ko-fi</div>
+</div>
+<div style="background:rgba(255,250,252,0.92); backdrop-filter:blur(3px); border-radius:32px; padding:1.2rem; border:1px solid rgba(255,207,223,0.9); margin-bottom:1rem;">
+<h3 style="font-size:1.2rem; font-weight:700; text-align:center; color:#aa3e60; margin-bottom:0.5rem;">📸 Image Carousel</h3>
+<div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; margin-bottom:0.8rem;">
+<a href="http://www.patreon.rf.gd/" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;" target="_blank">👑 Patreon+</a>
+<a href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;">💎 Ko-fi</a>
+<a href="https://www.blogger.com/followers/follow/3490337234484184582?hl=en" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;" target="_blank">➕ Follow</a>
+<a href="https://link.me/dancaplanet/shop" style="background:linear-gradient(105deg,#ff2a6d,#ff66b5); border:none; padding:0.3rem 1rem; border-radius:60px; font-weight:600; font-size:0.7rem; color:white; text-decoration:none; display:inline-flex; align-items:center; gap:4px;" target="_blank">🛒 Shop</a>
+</div>
+<div style="position:relative; background:#1a0f1a; border-radius:24px; overflow:hidden; margin-bottom:0.5rem;">
+<div id="patreonCarouselContainer" style="display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -webkit-overflow-scrolling:touch; scrollbar-width:thin; scrollbar-color:#ff77aa #2a1a2a;"></div>
+<button id="patreonCarouselPrev" style="position:absolute; top:50%; left:8px; transform:translateY(-50%); background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); border:none; width:32px; height:32px; border-radius:50%; color:white; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">‹</button>
+<button id="patreonCarouselNext" style="position:absolute; top:50%; right:8px; transform:translateY(-50%); background:rgba(0,0,0,0.6); backdrop-filter:blur(5px); border:none; width:32px; height:32px; border-radius:50%; color:white; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">›</button>
+</div>
+<div id="patreonCarouselCounter" style="text-align:center; font-size:0.7rem; color:#ac7f92;"></div>
+</div>
+<footer class="patreon-footer">♡ Patreon+ · Viral Dancando Trends · 2026 · Built with pink &amp; freedom ♡</footer>
+</div>
+<div class="patreon-section" id="ptab2">
+<div class="patreon-post-card">
+<div class="post-title">🔑 Choose Your Level of Access <span class="badge">MEMBERSHIP</span></div>
+<p>Join the <strong>Viral Dancando Trends</strong> community and unlock the full spectrum of our digital empire.</p>
+</div>
+<div class="patreon-grid">
+<div class="patreon-card"><span class="emoji-big">🖥️</span><h3>Tier 1 · The Observer</h3><p><strong>$5/mo</strong> — SFW Access. Privacy engineering, AI Beauty Pageant results, public Potato Chat channel.</p><a class="btn-pink" href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer">Subscribe</a></div>
+<div class="patreon-card"><span class="emoji-big">🎭</span><h3>Tier 2 · The Analyst</h3><p><strong>$15/mo</strong> — Assorted Content. Wellness reports, figure studies, <strong>"The Bond"</strong> series, private Potato Chat group.</p><a class="btn-pink" href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer">Subscribe</a></div>
+<div class="patreon-card vault"><span class="emoji-big">🕵️</span><h3>Tier 3 · The Insider</h3><p><strong>$25+/mo</strong> — The master key to <strong>The Vault</strong>. Mute &amp; Loop, Sweet Chocolate gallery, uncensored archives.</p><a class="btn-pink" href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer">Join Insider</a></div>
+</div>
+<div class="patreon-post-card" style="margin-top:1.2rem;">
+<div class="post-title">🤖 Instant Gratification</div>
+<p><strong>FedPromptly</strong> automation: subscribe → bot verifies → instant entry to private groups on Potato Chat or Telegram. No DMs, no waiting.</p>
+<div class="tags"><span>#automation</span><span>#instantaccess</span><span>#potatochat</span></div>
+</div>
+</div>
+<div class="patreon-section" id="ptab3">
+<div class="patreon-post-card" style="border-color:#ff80aa; background:rgba(255,20,80,0.15);">
+<div class="post-title">💎 The Vault · Uncut &amp; Uncensored <span class="badge" style="background:#ff1a6a;">18+</span></div>
+<p>Some things are meant to be discovered, not deleted. <strong>Patreon+</strong> is the unfiltered reality you've been looking for.</p>
+<div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.6rem 0;">
+<span style="background:rgba(255,255,255,0.15);padding:0.2rem 1rem;border-radius:50px;">🎬 Mute &amp; Loop</span>
+<span style="background:rgba(255,255,255,0.15);padding:0.2rem 1rem;border-radius:50px;">🍫 Sweet Chocolate</span>
+<span style="background:rgba(255,255,255,0.15);padding:0.2rem 1rem;border-radius:50px;">🤖 AI Art (Unrestricted)</span>
+</div>
+<a class="btn-pink" href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer" style="background:#ff1a6a;color:#fff;">🔓 Unlock the Archive</a>
+</div>
+<div class="patreon-grid">
+<div class="patreon-card vault"><span class="emoji-big">🎬</span><h3>Mute &amp; Loop S2</h3><p>Visual-focused storytelling. Exclusive for Potato Chat Fan Club. Search <strong>#ChildExpert</strong> or <strong>#Danceexpert</strong>.</p><span class="price-tag">$2.99/mo</span><br/><a class="btn-pink" href="#">Watch →</a></div>
+<div class="patreon-card vault"><span class="emoji-big">🍫</span><h3>Sweet Chocolate</h3><p>Exotic beauty gallery — a curated collection of artistic and uncensored visual stories.</p><a class="btn-pink" href="#">Explore →</a></div>
+</div>
+</div>
+<div class="patreon-section" id="ptab4">
+<div class="patreon-post-card">
+<div class="post-title">🔒 Some Things Are Meant to Be Discovered <span class="badge">VIRAL</span></div>
+<div class="meta">📱 Twitter / Social · #meninadancandofunk #funkdanca #dancafunk</div>
+<p>They build walls; we build bridges. <strong>Patreon+</strong> is the uncensored reality you've been looking for.</p>
+<div class="tags"><span>#funkbrasil</span><span>#viral</span><span>#danca</span><span>#meninadancandofunk</span></div>
+</div>
+<div class="patreon-post-card">
+<div class="post-title">🎬 Mute &amp; Loop: Season 2 is Airing! <span class="badge">NEW</span></div>
+<div class="meta">📺 Potato Chat Fan Club Exclusive</div>
+<p>The series that speaks for itself. Visual-focused storytelling with SFW and family-friendly options.</p>
+<div class="tags"><span>#muteandloop</span><span>#potatochat</span><span>#danceexpert</span></div>
+</div>
+<div class="patreon-post-card">
+<div class="post-title">🤖 Instant Access · No Manual Invites <span class="badge">AUTOMATION</span></div>
+<div class="meta">⚡ Powered by FedPromptly</div>
+<p>Subscribe or donate → bot verifies → instant entry. <strong>I do not answer DMs about access.</strong> The bot is your 24/7 concierge.</p>
+<a class="btn-pink" href="#">Get Your Key →</a>
+</div>
+</div>
+<div class="patreon-section" id="ptab5">
+<div class="patreon-post-card">
+<div class="post-title">🏰 Building a Ban-Proof Empire <span class="badge">ANCHOR</span></div>
+<p><strong>Sovereign Digital Infrastructure</strong> — learn the secrets of privacy engineering, self-hosting, ethical corporate bypassing, and decentralized communities on Keet and Matrix.</p>
+<p style="margin-top:0.4rem;">Our <strong>"Anchor"</strong> content provides a 100% compliant foundation while teaching you how to own your digital identity.</p>
+<div class="tags"><span>#privacy</span><span>#sovereignty</span><span>#decentralized</span><span>#keet</span></div>
+</div>
+<div class="patreon-grid">
+<div class="patreon-card"><span class="emoji-big">🔐</span><h3>Privacy Engineering</h3><p>Self-hosting, encryption, and ethical bypassing techniques for true digital freedom.</p><a class="btn-pink" href="#">Learn →</a></div>
+<div class="patreon-card"><span class="emoji-big">🌐</span><h3>Decentralized Communities</h3><p>Keet, Matrix, and Potato Chat — build your own ban-proof network.</p><a class="btn-pink" href="#">Explore →</a></div>
+</div>
+</div>
+</div>
+</div><div class="load-more-container" id="loadMoreContainer">
+<button class="load-more-btn" id="loadMoreBtn" style="display:none;">Load More</button>
+<div class="loading-more" id="loadingMore"><i class="fas fa-spinner fa-spin"></i> Loading more...</div>
+</div><div class="paypal-checkout-section" id="kofiCheckoutSection">
+<div class="checkout-header"><div class="icon-wrap"><i class="fas fa-heart"></i></div><h2>Support Pulse on Ko-fi</h2></div>
+<div class="checkout-body"><div class="info-col"><div class="feature"><i class="fas fa-heart"></i> Help keep the community growing</div><div class="feature"><i class="fas fa-lock"></i> Explore support and membership options on Ko-fi</div></div><div class="paypal-col"><button class="hero-button hero-button-secondary" type="button" data-kofi-support="" aria-controls="widgetContainer">Open Ko-fi support ↗</button></div></div>
+</div><footer class="site-footer">
+<div class="site-footer-main">
+<div class="site-footer-brand"><span class="footer-brand-mark">P</span><div><strong>Pulse</strong><p>A little corner for conversation, creativity, and community.</p></div></div>
+<a class="footer-server-link" href="#kofiframe" data-kofi-support="" aria-controls="widgetContainer" rel="noopener noreferrer">Support on Ko-fi ↗</a>
+</div>
+<div class="site-footer-links">
+<a href="#panel-public" onclick="document.querySelector('.tab-btn[data-tab=public]').click()">Public feed</a>
+<a href="#panel-members" onclick="document.querySelector('.tab-btn[data-tab=members]').click()">Members</a>
+<a href="#panel-subscribers" onclick="document.querySelector('.tab-btn[data-tab=subscribers]').click()">Subscribers</a>
+<a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to top ↑</a>
+</div>
+<div class="site-footer-bottom"><span>© 2026 Pulse</span><span>Public posts · Member spaces · Subscriber extras</span></div>
+</footer></main><aside aria-label="About the community" class="pulse-community"><section class="community-card"><div class="rail-label">THE PEOPLE BEHIND PULSE</div><h2>A shared little universe.</h2><p>A snapshot of the conversations and people making this space their own.</p><div class="stats-dashboard" id="statsDashboard">
+<div class="stat-item">
+<div class="stat-icon"><i class="fas fa-pen-fancy"></i></div>
+<div class="stat-value" id="statPosts">-</div>
+<div class="stat-label">Posts</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon"><i class="fas fa-reply"></i></div>
+<div class="stat-value" id="statReplies">-</div>
+<div class="stat-label">Replies</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon"><i class="fas fa-crown"></i></div>
+<div class="stat-value" id="statAdmins">-</div>
+<div class="stat-label">Admins</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+<div class="stat-value" id="statMods">-</div>
+<div class="stat-label">Mods</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon"><i class="fas fa-robot"></i></div>
+<div class="stat-value" id="statBots">-</div>
+<div class="stat-label">Bots</div>
+</div>
+<div class="stat-item">
+<div class="stat-icon"><i class="fas fa-users"></i></div>
+<div class="stat-value" id="statUsers">-</div>
+<div class="stat-label">Users</div>
+</div>
+<div class="stat-item stat-online">
+<div class="stat-icon"><i class="fas fa-circle" style="color:#34d399;font-size:0.65rem;"></i></div>
+<div class="stat-value" id="statOnline">-</div>
+<div class="stat-label">Online</div>
+</div>
+<div class="stat-item stat-visitors">
+<div class="stat-icon"><i class="fas fa-globe"></i></div>
+<div class="stat-value" id="statVisitors">-</div>
+<div class="stat-label">Total Visitors</div>
+</div>
+</div><div class="roles-legend">
+<span class="role"><span class="color-dot" style="background:#ef4444;"></span> Admin</span>
+<span class="role"><span class="color-dot" style="background:#f97316;"></span> Mod</span>
+<span class="role"><span class="color-dot" style="background:#eab308;"></span> Bot</span>
+<span class="role"><span class="color-dot" style="background:#22c55e;"></span> Anonymous</span>
+<span class="role"><span class="color-dot" style="background:#3b82f6;"></span> First Time</span>
+<span class="role"><span class="color-dot" style="background:#a855f7;"></span> Regular</span>
+<span class="role"><span class="color-dot" style="background:#ec4899;"></span> Blurred</span>
+<span class="role"><span class="color-dot" style="background:#fbbf24;"></span> Subscriber</span>
+</div></section><section aria-labelledby="communityGuideTitle" class="community-guide community-card">
+<div class="guide-heading"><span>FIND YOUR CORNER</span><h2 id="communityGuideTitle">A few ways to show up.</h2></div>
+<div class="guide-grid">
+<button class="guide-card" onclick="document.querySelector('.tab-btn[data-tab=public]').click()" type="button">
+<span class="guide-icon guide-icon-coral"><i aria-hidden="true" class="fas fa-earth-americas"></i></span><span class="guide-card-copy"><strong>Public feed</strong><small>Browse open posts, share a thought, or add an image.</small></span><i aria-hidden="true" class="fas fa-arrow-right guide-arrow"></i>
+</button>
+<button class="guide-card" onclick="document.querySelector('.tab-btn[data-tab=members]').click()" type="button">
+<span class="guide-icon guide-icon-lime"><i aria-hidden="true" class="fas fa-users"></i></span><span class="guide-card-copy"><strong>Member space</strong><small>Log in to see and post in the members-only feed.</small></span><i aria-hidden="true" class="fas fa-arrow-right guide-arrow"></i>
+</button>
+<button class="guide-card" onclick="document.querySelector('.tab-btn[data-tab=subscribers]').click()" type="button">
+<span class="guide-icon guide-icon-pink"><i aria-hidden="true" class="fas fa-star"></i></span><span class="guide-card-copy"><strong>Subscriber extras</strong><small>Request access to the subscriber feed and its posts.</small></span><i aria-hidden="true" class="fas fa-arrow-right guide-arrow"></i>
+</button>
+</div>
+</section><section class="community-promo" aria-label="A little community fun"><img src="pulse-potato-sidekick.webp" alt="A potato superhero holding a phone, ready to save the group chat" loading="lazy" decoding="async"/><div class="community-promo-copy"><span class="promo-eyebrow">TINY HERO. BIG CHAT.</span><strong>Rescue the group chat.</strong><p>Drop a thought, a photo, or one extremely important potato update.</p><button type="button" onclick="document.querySelector('.tab-btn[data-tab=public]').click()">Join the conversation <span aria-hidden="true">↗</span></button></div></section></aside></div></div><!-- end .app-container -->
+<!-- ================================================================
     JAVASCRIPT (FIXED: visitor counter increments on every page load)
     ================================================================ -->
-    <script>
-        (function() {
+<script>
+        window.addEventListener('DOMContentLoaded', function() {
             // ==============================================================
             // SUPABASE CONFIG
             // ==============================================================
@@ -3067,6 +3218,7 @@
             // PayPal Edge Functions use a separate Supabase project
             const PAYPAL_SUPABASE_URL = "https://udblpaojoqwtqdryejgi.supabase.co";
             const PAYPAL_SUPABASE_KEY = "sb_publishable_w0yGrrpWfuJqQFzNXXHM7g_cogUGoeq";
+
 
             let supabase = null;
             let supabaseReady = false;
@@ -3094,10 +3246,7 @@
             // ==============================================================
             // INTRO OVERLAY
             // ==============================================================
-            setTimeout(() => {
-                const overlay = document.getElementById('intro-overlay');
-                if (overlay) overlay.classList.add('hidden');
-            }, 2000);
+
 
             // ==============================================================
             // DOM REFS
@@ -3271,7 +3420,8 @@
                     slide.style.cssText =
                         'flex:0 0 100%; scroll-snap-align:start; display:flex; justify-content:center; align-items:center; background:#0e0912; min-height:40vh;';
                     const img = document.createElement('img');
-                    img.src = src;
+                    img.dataset.src = src;
+                    img.loading = 'lazy'; img.decoding = 'async';
                     img.alt = 'Carousel';
                     img.style.cssText = 'max-width:100%; max-height:50vh; width:auto; height:auto; object-fit:contain; display:block;';
                     img.onerror = function() { this.src = 'https://placehold.co/800x400?text=Image'; };
@@ -3312,23 +3462,6 @@
             })();
 
             // ==============================================================
-            // PATREON PAYPAL
-            // ==============================================================
-            if (typeof paypal !== 'undefined') {
-                try {
-                    paypal.Buttons({
-                        style: { shape: 'pill', color: 'gold', layout: 'vertical', label: 'subscribe', height: 44 },
-                        createSubscription: function(data, actions) {
-                            return actions.subscription.create({ plan_id: 'P-4CH66365SP314171VNIPAMFQ' });
-                        },
-                        onApprove: function(data, actions) {
-                            alert(`🎉 Thank you for subscribing! 🎉\nSubscription ID: ${data.subscriptionID}\nYou now have VIP access.`);
-                        }
-                    }).render('#paypal-button-container-P-4CH66365SP314171VNIPAMFQ');
-                } catch (e) { console.warn('PayPal render error:', e); }
-            }
-
-            // ==============================================================
             // PATREON KEYFRAMES
             // ==============================================================
             (function injectPatreonKeyframes() {
@@ -3359,7 +3492,11 @@
                 return messages;
             }
 
+            let lastTickerMessages = '';
             function updateTicker(messages) {
+                const signature = JSON.stringify(messages);
+                if (signature === lastTickerMessages) return;
+                lastTickerMessages = signature;
                 if (!messages || messages.length === 0) return;
                 const items = tickerContent.querySelectorAll('.ticker-item');
                 items.forEach(el => el.remove());
@@ -3707,7 +3844,9 @@
                 let html = '';
                 const now = Date.now();
                 const allPosts = postsData;
-                postsData.forEach(post => {
+                const issueNumberOffset = append ? container.querySelectorAll('.post-card').length : 0;
+                postsData.forEach((post, postIndex) => {
+                    const issueNumber = String(issueNumberOffset + postIndex + 1).padStart(3, '0');
                     const username = post.username || '';
                     const displayName = username || 'Anonymous';
                     const initials = getInitials(displayName);
@@ -3738,7 +3877,7 @@
                         if (isVideo) {
                             mediaHtml = `
                                 <div class="post-image-wrapper ${blurClass}" id="mediaWrapper-${post.id}">
-                                    <video controls src="${escapeHTML(url)}" onerror="this.style.display='none'"></video>
+                                    <video controls preload="none" src="${escapeHTML(url)}" onerror="this.style.display='none'"></video>
                                     ${post.blurred ? `<div class="blur-badge"><i class="fas fa-eye-slash"></i> Blurred</div>` : ''}
                                 </div>
                             `;
@@ -3758,6 +3897,10 @@
 
                     html += `
                         <div class="post-card ${tintClass}" data-id="${post.id}" id="post-${post.id}">
+                            <div class="issue-masthead">
+                                <span class="issue-series">Pulse Community Magazine</span>
+                                <span class="issue-number"><span>ISSUE</span><strong>${issueNumber}</strong></span>
+                            </div>
                             <div class="post-header">
                                 <div class="avatar" style="background:${color};">
                                     <img src="${avatarImg}" alt="${escapeHTML(displayName)}" onerror="this.style.display='none'" />
@@ -4118,8 +4261,15 @@
                     if (!postsCache[category]) postsCache[category] = [];
                     postsCache[category] = postsCache[category].concat(data);
                     const ids = data.map(p => p.id);
-                    await fetchCommentsForPosts(ids);
                     renderPostsForCategory(category, data, loadMore);
+                    fetchCommentsForPosts(ids).then(() => {
+                        ids.forEach(id => {
+                            const list = document.getElementById(`commentList-${id}`);
+                            if (list) list.innerHTML = renderComments(id);
+                            const count = document.querySelector(`.comment-toggle[data-id="${id}"] .comment-count`);
+                            if (count) count.textContent = (commentsMap.get(id) || []).length;
+                        });
+                    });
 
                     if (data.length > 0) {
                         lastIdCache[category] = data[data.length - 1].id;
@@ -4149,6 +4299,15 @@
             // ==============================================================
             function switchTab(category) {
                 currentCategory = category;
+                if (category !== 'patreon') document.querySelectorAll('#panel-patreon video').forEach(video => video.pause());
+                const spaceTitle = document.getElementById('currentSpaceTitle');
+                if (spaceTitle) spaceTitle.textContent = ({public:'The public edit',members:'The member edit',subscribers:'The subscriber edit',patreon:'Patreon+',admin:'Admin inbox'})[category] || 'The public edit';
+                if (category === 'patreon') {
+                    document.querySelectorAll('#panel-patreon [data-src]').forEach(el => { el.src = el.dataset.src; delete el.dataset.src; });
+                    document.querySelectorAll('#panel-patreon video').forEach(video => { if (!video.dataset.loaded) { video.load(); video.dataset.loaded = 'true'; } if (video.dataset.autoplay) video.play().catch(() => {}); });
+                }
+                document.getElementById('loadMoreContainer').style.display = (category === 'patreon' || category === 'admin') ? 'none' : '';
+
                 tabBtns.forEach(btn => {
                     btn.classList.toggle('active', btn.dataset.tab === category);
                 });
@@ -4175,6 +4334,7 @@
             tabBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     const cat = this.dataset.tab;
+                    if (!cat) return;
                     if (cat === 'patreon') {
                         switchTab('patreon');
                         return;
@@ -4579,8 +4739,6 @@
                         adminTabBtn.style.display = 'none';
                     }
                     checkSubscriberStatus(user);
-                    // Update PayPal checkout UI
-                    updatePaypalCheckoutUI(user);
                 } else {
                     authBtn.innerHTML = `<i class="fas fa-sign-in-alt"></i> Login`;
                     authBtn.className = 'auth-btn auth-login';
@@ -4594,7 +4752,6 @@
                     subscriberRequestPending.style.display = 'none';
                     subscribersCreatePost.style.display = 'none';
                     subscribersLoginPrompt.style.display = 'block';
-                    updatePaypalCheckoutUI(null);
                 }
                 refreshTicker();
             }
@@ -4617,6 +4774,7 @@
 
             if (supabaseReady) {
                 supabase.auth.onAuthStateChange((event, session) => {
+                    if (event === 'INITIAL_SESSION') return;
                     if (session?.user) {
                         updateAuthUI(session.user);
                         fetchStats();
@@ -5156,31 +5314,49 @@
                 var btn = document.getElementById('showWidgetBtn');
                 var widgetDiv = document.getElementById('widgetContainer');
                 var closeBtn = document.getElementById('closeWidgetBtn');
+                var backdrop = document.getElementById('supportPreviewBackdrop');
 
-                if (btn && widgetDiv) {
-                    btn.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        if (widgetDiv.style.display === 'none' || widgetDiv.style.display === '') {
-                            widgetDiv.style.display = 'block';
-                        } else {
-                            widgetDiv.style.display = 'none';
-                        }
-                    });
-
-                    if (closeBtn) {
-                        closeBtn.addEventListener('click', function(e) {
-                            e.stopPropagation();
-                            widgetDiv.style.display = 'none';
-                        });
-                    }
-
-                    document.addEventListener('click', function(event) {
-                        var container = document.getElementById('tipButtonContainer');
-                        if (container && !container.contains(event.target)) {
-                            widgetDiv.style.display = 'none';
-                        }
-                    });
+                if (!btn || !widgetDiv || !backdrop) return;
+                let returnFocusTarget = btn;
+                function openPreview(trigger = btn) {
+                    returnFocusTarget = trigger;
+                    const frame = document.getElementById('kofiframe');
+                    if (frame && !frame.getAttribute('src')) frame.src = frame.dataset.src;
+                    widgetDiv.style.display = 'block';
+                    backdrop.style.display = 'block';
+                    document.body.classList.add('support-preview-open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    if (closeBtn) closeBtn.focus();
                 }
+                function closePreview(returnFocus) {
+                    widgetDiv.style.display = 'none';
+                    backdrop.style.display = 'none';
+                    document.body.classList.remove('support-preview-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    if (returnFocus) returnFocusTarget.focus();
+                }
+                document.addEventListener('click', function(event) {
+                    const trigger = event.target.closest('[data-kofi-support], #donateTabBtn');
+                    if (!trigger) return;
+                    event.preventDefault();
+                    openPreview(trigger);
+                });
+                btn.addEventListener('click', function() {
+                    if (widgetDiv.style.display === 'block') closePreview(false);
+                    else openPreview();
+                });
+                if (closeBtn) closeBtn.addEventListener('click', function() { closePreview(true); });
+                backdrop.addEventListener('click', function() { closePreview(true); });
+                document.addEventListener('keydown', function(event) {
+                    if (widgetDiv.style.display !== 'block') return;
+                    if (event.key === 'Escape') closePreview(true);
+                    if (event.key === 'Tab') {
+                        const focusable = [...widgetDiv.querySelectorAll('button, a[href], iframe')];
+                        const first = focusable[0], last = focusable[focusable.length - 1];
+                        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+                    }
+                });
             })();
 
             // ==============================================================
@@ -5251,237 +5427,17 @@
             }
 
             // ==============================================================
-            // PAYPAL CHECKOUT — BOTTOM OF PAGE
-            // ==============================================================
-            let paypalRendered = false;
-            const paypalContainer = document.getElementById('paypalButtonContainer');
-            const paypalStatusMsg = document.getElementById('paypalStatusMsg');
-            const paypalStatusText = document.getElementById('paypalStatusText');
-            const paypalStatusDot = document.getElementById('paypalStatusDot');
-            const subscriberBadgeContainer = document.getElementById('subscriberBadgeContainer');
-
-            async function callPaypalEdgeFunction(functionName, bodyData) {
-                if (!paypalSupabaseReady) throw new Error('PayPal Supabase not available');
-                const { data, error } = await paypalSupabase.functions.invoke(functionName, { body: bodyData });
-                if (error) throw new Error(error.message || 'Function invocation failed');
-                return data;
-            }
-
-            async function checkPaypalSubscriptionStatus(userId) {
-                if (!userId || !paypalSupabaseReady) return false;
-                try {
-                    const { data, error } = await paypalSupabase
-                        .from('orders')
-                        .select('id')
-                        .eq('user_id', userId)
-                        .eq('status', 'captured')
-                        .limit(1);
-                    if (error) { console.error('Subscription check error:', error); return false; }
-                    return data && data.length > 0;
-                } catch (e) { return false; }
-            }
-
-            function renderPayPalButton() {
-                if (paypalRendered) return;
-                if (typeof paypal === 'undefined') {
-                    console.warn('PayPal SDK not loaded yet');
-                    if (paypalStatusMsg) {
-                        paypalStatusMsg.className = 'paypal-status-msg error';
-                        paypalStatusMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> PayPal SDK failed to load. Please refresh.';
-                    }
-                    return;
-                }
-
-                paypalContainer.innerHTML = '';
-
-                try {
-                    paypal.Buttons({
-                        style: {
-                            shape: 'pill',
-                            color: 'gold',
-                            layout: 'vertical',
-                            label: 'paypal',
-                            height: 44
-                        },
-                        createOrder: async function(data, actions) {
-                            if (!currentUser) {
-                                alert('Please log in first to subscribe.');
-                                return;
-                            }
-                            try {
-                                const result = await callPaypalEdgeFunction('create-paypal-order', {
-                                    amount: '19.99',
-                                    currency: 'USD',
-                                    description: 'Pulse Premium Subscription'
-                                });
-                                return result.orderId;
-                            } catch (err) {
-                                alert('Failed to create order: ' + err.message);
-                                throw err;
-                            }
-                        },
-                        onApprove: async function(data, actions) {
-                            try {
-                                if (paypalStatusMsg) {
-                                    paypalStatusMsg.className = 'paypal-status-msg';
-                                    paypalStatusMsg.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing payment...';
-                                }
-                                const captureResult = await callPaypalEdgeFunction('capture-paypal-order', {
-                                    paypal_order_id: data.orderID,
-                                    user_email: currentUser?.email || 'anonymous'
-                                });
-                                console.log('Capture result:', captureResult);
-
-                                if (paypalStatusMsg) {
-                                    paypalStatusMsg.className = 'paypal-status-msg';
-                                    paypalStatusMsg.innerHTML = '✅ Payment successful! You now have full access. 🎉';
-                                }
-                                if (paypalStatusText) paypalStatusText.textContent = 'Subscribed ✅';
-                                if (paypalStatusDot) {
-                                    paypalStatusDot.className = 'dot online';
-                                    paypalStatusDot.style.background = '#34d399';
-                                }
-
-                                fireConfetti();
-                                alert('✅ Payment successful! You now have access to premium content.');
-
-                                if (currentUser) {
-                                    const isSub = await checkPaypalSubscriptionStatus(currentUser.id);
-                                    if (isSub) {
-                                        subscriberBadgeContainer.innerHTML =
-                                            `<span class="subscriber-badge-active"><i class="fas fa-star"></i> Premium Subscriber</span>`;
-                                    }
-                                }
-
-                                paypalContainer.innerHTML =
-                                    '<div class="paypal-status-msg" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.3);"><i class="fas fa-check-circle" style="color:#34d399;"></i> Thank you for subscribing! You now have premium access.</div>';
-                                paypalRendered = true;
-
-                            } catch (err) {
-                                console.error('Capture error:', err);
-                                alert('Capture failed: ' + err.message);
-                                if (paypalStatusMsg) {
-                                    paypalStatusMsg.className = 'paypal-status-msg error';
-                                    paypalStatusMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + err
-                                        .message;
-                                }
-                            }
-                        },
-                        onError: function(err) {
-                            const msg = 'PayPal error: ' + (err.message || JSON.stringify(err));
-                            console.error(msg);
-                            alert(msg);
-                            if (paypalStatusMsg) {
-                                paypalStatusMsg.className = 'paypal-status-msg error';
-                                paypalStatusMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + msg;
-                            }
-                            if (paypalStatusText) paypalStatusText.textContent = 'Error';
-                            if (paypalStatusDot) {
-                                paypalStatusDot.className = 'dot offline';
-                                paypalStatusDot.style.background = '#ef4444';
-                            }
-                        }
-                    }).render(paypalContainer);
-                    paypalRendered = true;
-                    if (paypalStatusMsg) {
-                        paypalStatusMsg.className = 'paypal-status-msg';
-                        paypalStatusMsg.innerHTML = '<i class="fas fa-check-circle" style="color:#34d399;"></i> Ready to subscribe';
-                    }
-                    if (paypalStatusText) paypalStatusText.textContent = 'Ready';
-                    if (paypalStatusDot) {
-                        paypalStatusDot.className = 'dot online';
-                        paypalStatusDot.style.background = '#34d399';
-                    }
-                } catch (e) {
-                    console.error('PayPal render error:', e);
-                    if (paypalStatusMsg) {
-                        paypalStatusMsg.className = 'paypal-status-msg error';
-                        paypalStatusMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error loading PayPal: ' + e
-                            .message;
-                    }
-                }
-            }
-
-            async function updatePaypalCheckoutUI(user) {
-                if (!paypalContainer) return;
-
-                if (!user) {
-                    paypalContainer.innerHTML = `
-                        <div class="auth-required-msg">
-                            <i class="fas fa-lock" style="color:#a78bfa; font-size:1.2rem; display:block; margin-bottom:0.3rem;"></i>
-                            Please <a onclick="openLoginModal()">log in</a> to subscribe.
-                        </div>
-                    `;
-                    subscriberBadgeContainer.innerHTML = '';
-                    paypalRendered = true;
-                    if (paypalStatusText) paypalStatusText.textContent = 'Login required';
-                    if (paypalStatusDot) {
-                        paypalStatusDot.className = 'dot offline';
-                        paypalStatusDot.style.background = '#64748b';
-                    }
-                    return;
-                }
-
-                try {
-                    const isSubscriber = await checkPaypalSubscriptionStatus(user.id);
-                    if (isSubscriber) {
-                        paypalContainer.innerHTML =
-                            `<div class="paypal-status-msg" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.3);"><i class="fas fa-check-circle" style="color:#34d399;"></i> You are already a premium subscriber! ✅</div>`;
-                        subscriberBadgeContainer.innerHTML =
-                            `<span class="subscriber-badge-active"><i class="fas fa-star"></i> Premium Subscriber</span>`;
-                        paypalRendered = true;
-                        if (paypalStatusText) paypalStatusText.textContent = 'Subscribed ✅';
-                        if (paypalStatusDot) {
-                            paypalStatusDot.className = 'dot online';
-                            paypalStatusDot.style.background = '#34d399';
-                        }
-                        return;
-                    }
-                } catch (e) {
-                    console.warn('Subscription check error:', e);
-                }
-
-                subscriberBadgeContainer.innerHTML = '';
-                paypalRendered = false;
-                renderPayPalButton();
-                if (paypalStatusText) paypalStatusText.textContent = 'Ready';
-                if (paypalStatusDot) {
-                    paypalStatusDot.className = 'dot online';
-                    paypalStatusDot.style.background = '#34d399';
-                }
-            }
-
-            // ==============================================================
-            // DONATE TAB - SCROLL TO BOTTOM
-            // ==============================================================
-            const donateTabBtn = document.getElementById('donateTabBtn');
-            if (donateTabBtn) {
-                donateTabBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const checkoutSection = document.getElementById('paypalCheckoutSection');
-                    if (checkoutSection) {
-                        checkoutSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            }
-
-            // ==============================================================
             // STARTUP
             // ==============================================================
-            setTimeout(() => {
-                const overlay = document.getElementById('intro-overlay');
-                if (overlay) overlay.classList.add('hidden');
-            }, 2000);
+
 
             (async function init() {
-                const newCount = await incrementTotalVisits();
-                if (newCount !== null && statVisitors) {
-                    statVisitors.textContent = newCount;
-                }
-
-                await checkAuth();
-                await fetchStats();
                 switchTab('public');
+                checkAuth().catch(console.warn);
+                incrementTotalVisits().then(newCount => {
+                    if (newCount !== null && statVisitors) statVisitors.textContent = newCount;
+                }).catch(console.warn);
+                fetchStats().catch(console.warn);
                 subscribe();
 
                 setInterval(async () => {
@@ -5497,8 +5453,101 @@
 
             window.openLoginModal = openLoginModal;
 
-        })();
+        });
     </script>
+<script>
+(function(){
+  function initCommunityBackgroundSlideshow(){
+    if(document.getElementById('communityImageSlideshow')) return;
+    const root=document.createElement('div');
+    root.id='communityImageSlideshow';
+    root.setAttribute('aria-hidden','true');
+    const slides=[0,1].map(()=>{
+      const img=document.createElement('img');
+      img.className='community-background-slide';
+      img.alt='';
+      img.decoding='async';
+      img.referrerPolicy='no-referrer';
+      img.draggable=false;
+      root.appendChild(img);
+      return img;
+    });
+    document.body.prepend(root);
+    const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const failed=new Set();
+    const wired=new WeakSet();
+    let imageUrls=[];
+    let currentIndex=-1;
+    let activeLayer=-1;
+    let timer=null;
+    let scanQueued=false;
 
+    function stopTimer(){if(timer){clearInterval(timer);timer=null;}}
+    function clearSlides(){
+      slides.forEach(img=>{img.onload=null;img.onerror=null;img.classList.remove('is-visible');img.removeAttribute('src');});
+      currentIndex=-1;
+      activeLayer=-1;
+    }
+    function showSlide(requestedIndex){
+      if(!imageUrls.length) return;
+      let nextIndex=-1;
+      for(let step=0;step<imageUrls.length;step++){
+        const idx=(requestedIndex+step)%imageUrls.length;
+        if(!failed.has(imageUrls[idx])){nextIndex=idx;break;}
+      }
+      if(nextIndex<0){clearSlides();return;}
+      const nextUrl=imageUrls[nextIndex];
+      if(nextIndex===currentIndex && activeLayer>=0 && slides[activeLayer].src===nextUrl) return;
+      const nextLayer=activeLayer<0?0:1-activeLayer;
+      const incoming=slides[nextLayer];
+      const outgoing=activeLayer>=0?slides[activeLayer]:null;
+      incoming.onload=()=>{
+        incoming.classList.add('is-visible');
+        if(outgoing) outgoing.classList.remove('is-visible');
+        currentIndex=nextIndex;
+        activeLayer=nextLayer;
+      };
+      incoming.onerror=()=>{
+        failed.add(nextUrl);
+        incoming.classList.remove('is-visible');
+        incoming.removeAttribute('src');
+        if(imageUrls.length>1) showSlide((nextIndex+1)%imageUrls.length);
+      };
+      incoming.src=nextUrl;
+      if(incoming.complete && incoming.naturalWidth>0) incoming.onload();
+    }
+    function scanImages(){
+      const found=[];
+      document.querySelectorAll('.post-image-wrapper img[src]').forEach(img=>{
+        const wrapper=img.closest('.post-image-wrapper');
+        if(!wrapper || wrapper.classList.contains('blurred') || img.style.display==='none') return;
+        const src=img.currentSrc || img.src;
+        if(!src || failed.has(src) || found.includes(src)) return;
+        found.push(src);
+        if(!wired.has(img)){wired.add(img);img.addEventListener('error',queueScan,{once:true});}
+      });
+      const previous=currentIndex>=0?imageUrls[currentIndex]:null;
+      imageUrls=found;
+      if(!imageUrls.length){stopTimer();clearSlides();return;}
+      if(previous && imageUrls.includes(previous)) currentIndex=imageUrls.indexOf(previous);
+      else if(currentIndex>=0){clearSlides();}
+      if(currentIndex<0) showSlide(0);
+      if(reduceMotion || imageUrls.length<2){stopTimer();return;}
+      if(!timer) timer=setInterval(()=>showSlide((currentIndex+1)%imageUrls.length),6000);
+    }
+    function queueScan(){
+      if(scanQueued) return;
+      scanQueued=true;
+      requestAnimationFrame(()=>{scanQueued=false;scanImages();});
+    }
+    const observer=new MutationObserver(queueScan);
+    observer.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['class','src']});
+    scanImages();
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initCommunityBackgroundSlideshow,{once:true});
+  else initCommunityBackgroundSlideshow();
+})();
+</script>
 </body>
 </html>
+
